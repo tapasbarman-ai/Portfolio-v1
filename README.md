@@ -1,6 +1,6 @@
 # Visual Studio Code Themed Developer Portfolio
 
-A high-fidelity, premium clone of Aahana Bobade's portfolio website. Designed and structured exactly like the VS Code IDE. 
+A high-fidelity, premium developer portfolio website for Tapas Barman, designed and structured exactly like the VS Code IDE. 
 
 This is a **Single Page Application (SPA)** written in clean, modern vanilla HTML, CSS, and JS. It requires no complex build steps, bundlers, or package installs, making it extremely lightweight, highly performant, and simple to deploy.
 
@@ -118,12 +118,16 @@ const Hp = [
 ```
 
 ### 6. Swap Avatar Image
-To change the avatar profile photo on the home page, change the background-image URL inside [assets/index.css](file:///c:/Users/tb619/Videos/Projects/Portfolio/assets/index.css) under `.avatar-ring`:
+To change the avatar profile photo on the home page, change the background-image URL inside [assets/index.css](file:///c:/Users/tb619/Videos/Projects/Portfolio/assets/index.css) under `.home-avatar`:
 ```css
-.avatar-ring {
-  background-image: url("https://github.com/your-username.png"); /* Connects to your GitHub avatar */
+.home-avatar {
+  background-image: url("profile.jpg"); /* Local path or remote URL to your profile image */
 }
 ```
 
-### 7. Connect Copilot Assistant Answers
+### 7. Update Resume File
+To update the downloadable PDF resume:
+- Replace the existing `Resume.pdf` file in the root directory with your own PDF file. Ensure the name remains exactly `Resume.pdf` so the sidebar and command palette download routes work seamlessly.
+
+### 8. Connect Copilot Assistant Answers
 To adjust what the Copilot chatbot answers when users ask questions, modify the keywords and replies inside the `copilotKnowledgeBase` array at the bottom of [assets/index.js](file:///c:/Users/tb619/Videos/Projects/Portfolio/assets/index.js).

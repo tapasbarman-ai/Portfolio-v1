@@ -1,0 +1,22 @@
+# OS metadata files
+.DS_Store
+Thumbs.db
+
+# Editor configurations and IDE folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local development caches / servers
+node_modules/
+.npm/
+package-lock.json
+
+# Temporary logs or system metadata
+*.log
+.gemini/
+.system_generated/
