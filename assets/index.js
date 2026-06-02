@@ -93,6 +93,18 @@ const Op = [
     tags: ["LangGraph", "LangChain", "Groq LLaMA", "Tavily API", "DistilBERT", "Streamlit", "FastAPI"],
     link: "https://github.com/tapasbarman-ai/Ai-Trend-Notifier",
     period: "2025"
+  },
+  {
+    id: 3,
+    icon: "🏥",
+    accent: "#4ec9b0",
+    type: "GenAI · Multi-Agent · Medical RAG",
+    name: "Medical AI Chatbot",
+    desc: "Developed an intelligent multi-agent medical chatbot utilizing LangGraph. Orchestrates PubMed clinical databases, local FAISS vector databases, and Tavily web searches to deliver synthesised health responses. Includes LLM fallback (70B/8B Groq), cache optimizations, and automated medical disclaimer guardrails.",
+    tags: ["LangGraph", "LangChain", "Flask", "FAISS", "Groq API", "Tavily API", "Python", "Docker"],
+    link: "https://github.com/Tapas000/Multi-Agent-RAG-Medical-Assistant",
+    demo: "https://multi-agent-medical-rag-2.onrender.com/",
+    period: "2025"
   }
 ];
 
@@ -801,7 +813,7 @@ const copilotKnowledgeBase = [
   },
   {
     keys: ["projects", "shipped", "portfolio", "build"],
-    reply: "He has built several high-impact MLOps and GenAI systems: **Wind DSM Optimizer** (a forecasting platform projecting 1.41 Cr in annual savings), a **Secure Production MLOps Platform** with Jenkins, SonarQube, and Trivy, and an autonomous **AI Trend Notifier** using LangGraph and Groq LLaMA."
+    reply: "He has built several high-impact MLOps and GenAI systems: **Wind DSM Optimizer** (a forecasting platform saving ~1.41 Cr annually), a **Secure Production MLOps Platform** with Jenkins/SonarQube, an autonomous **AI Trend Notifier** (LangGraph), and an intelligent multi-agent **Medical AI Chatbot** combining RAG and PubMed."
   },
   {
     keys: ["wind", "dsm", "climate forte", "forecasting"],
@@ -814,6 +826,10 @@ const copilotKnowledgeBase = [
   {
     keys: ["trend", "notifier", "langgraph", "agent"],
     reply: "The AI Trend Notifier is a multi-agent system built with LangGraph and LangChain. It autonomously monitors Twitter/Reddit for AI signals, runs DistilBERT sentiment classification, searches the web via Tavily, and drafts LLM newsletters via LLaMA on Groq."
+  },
+  {
+    keys: ["medical", "chatbot", "rag", "health", "pubmed", "faiss"],
+    reply: "The Medical AI Chatbot is an intelligent multi-agent chatbot built with LangGraph, LangChain, and Flask. It dynamically orchestrates FAISS vector databases, Europe PMC/PubMed research literature, and Tavily web searches to deliver aggregated clinical information."
   },
   {
     keys: ["skills", "stack", "languages", "python", "airflow", "docker"],
@@ -833,7 +849,7 @@ const copilotKnowledgeBase = [
   },
   {
     keys: ["source", "repo", "code", "download", "clone"],
-    reply: "The repository for this website is private intentionally. Tapas built this VS Code portfolio theme to showcase his skills cleanly, but you can inspect the design from a distance!"
+    reply: "This portfolio website repository is publicly available on GitHub at **https://github.com/tapasbarman-ai/Portfolio-v1.git**. You can clone and inspect the full SPA codebase!"
   },
   {
     keys: ["how are you", "sup", "how's it going"],
