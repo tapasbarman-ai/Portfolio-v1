@@ -3,9 +3,11 @@ const Ee = {
   role: "MLOps Engineer | AI Engineer | Data Scientist",
   location: "Lucknow, India 🇮🇳",
   email: "tapasb.dev@gmail.com",
+  phone: "+91 7363971909",
   bio2: "Hi, Tapas here! I am a results-driven MLOps and AI Engineer pursuing M.Sc. Data Science at IIIT Lucknow. I specialize in end-to-end ML pipeline automation, LLM-powered agentic workflows, and secure DevSecOps pipelines. I love translating complex ML architectures into quantified business value.",
   links: {
     email: "tapasb.dev@gmail.com",
+    phone: "+91 7363971909",
     linkedin: "https://www.linkedin.com/in/tapas-barman-2661161a0/",
     github: "https://github.com/tapasbarman-ai",
     kaggle: "https://www.kaggle.com/tapasbarman"
@@ -505,6 +507,7 @@ function generateDynamicContent() {
   const socialsGrid = document.getElementById("socialsGrid");
   const platformColors = {
     email: { color: "#4ec9b0", bg: "rgba(78, 201, 176, 0.08)" },
+    phone: { color: "#facc15", bg: "rgba(250, 204, 21, 0.08)" },
     linkedin: { color: "#0077b5", bg: "rgba(0, 119, 181, 0.08)" },
     github: { color: "#e6edf3", bg: "rgba(230, 237, 243, 0.08)" },
     kaggle: { color: "#20beff", bg: "rgba(32, 190, 255, 0.08)" }
@@ -515,7 +518,7 @@ function generateDynamicContent() {
     const style = platformColors[platform] || { color: "var(--text)", bg: "rgba(255, 255, 255, 0.03)" };
     
     return `
-      <a class="social-btn" href="${platform === 'email' ? 'mailto:' + url : url}" target="_blank" 
+      <a class="social-btn" href="${platform === 'email' ? 'mailto:' + url : (platform === 'phone' ? 'tel:' + url.replace(/\s+/g, '') : url)}" target="_blank" 
          style="--accent-hover-color: ${style.color}; background: ${style.bg};">
         <span class="uppercase tracking-widest font-bold text-[10px]">${platform}</span>
       </a>
