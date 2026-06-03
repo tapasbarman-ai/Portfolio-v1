@@ -169,12 +169,12 @@ const Dp = ["Apache Kafka", "Snowflake", "MinIO / S3", "Tavily API", "Groq API",
 // Experiences Data
 const Hp = [
   {
-    date: "Dec 2025 - Present",
-    current: true,
-    role: "MLOps Engineer Intern",
-    company: "Aaizel International Technologies Pvt. Ltd.",
+    date: "Dec 2025 - Mar 2026",
+    current: false,
+    role: "MLOps Intern",
+    company: "Aaizel International Technologies Private Limited",
     location: "On-Site",
-    desc: "Architected ETL & ML inference pipelines for <a href='https://www.aaizeltech.com/climateforte' target='_blank' style='color: var(--blue); text-decoration: underline; font-weight: 500;'>Climate Forte</a> (75 MW wind platform — see case study in <a href='#' onclick=\"openFile('enterprise_projects'); return false;\" style='color: var(--pink); text-decoration: underline; font-weight: 500;'>enterprise_projects.md</a>) using Apache Airflow and MinIO/S3. Implemented full ML lifecycle: MLflow, DVC, Evidently AI drift checks, and Jenkins CI/CD with champion-challenger deployment. Built OSINT backend for VidyaDristi using NER, embeddings, and FAISS. Secured pipeline using SonarQube, Trivy, Gitleaks, and Nexus.",
+    desc: "Built a production-grade ETL & ML pipeline for <a href='https://www.aaizeltech.com/weather-api' target='_blank' style='color: var(--blue); text-decoration: underline; font-weight: 500;'>Climate Forte</a> (75 MW wind platform — see case study in <a href='#' onclick=\"openFile('enterprise_projects'); return false;\" style='color: var(--pink); text-decoration: underline; font-weight: 500;'>enterprise_projects.md</a>) using Apache Airflow for data ingestion, model inference, and S3 storage; automated retraining and drift monitoring via MLflow, DVC, Evidently AI, and Jenkins. Developed ML backend for VidyaDristi (OSINT) implementing NER, LLM embeddings, vector search, and clustering for intelligence extraction and entity resolution.",
     tags: ["Apache Airflow", "MLflow", "DVC", "Evidently AI", "Jenkins", "FAISS", "Docker", "DevSecOps"]
   },
   {
@@ -185,6 +185,15 @@ const Hp = [
     location: "Remote",
     desc: "Engineered Tamil & Sanskrit OCR systems for Kalanjiyam, IIT Bombay's ancient Siddha literature preservation platform. Replaced Tesseract with EasyOCR (3x throughput, 18% CER reduction). Designed a YOLO + Transformer table extraction pipeline (22% accuracy boost), integrated via FastAPI REST endpoints.",
     tags: ["EasyOCR", "YOLO", "FastAPI", "Transformers", "Python", "OCR Metrics", "REST APIs"]
+  },
+  {
+    date: "Sep 2024 - Jun 2025",
+    current: false,
+    role: "Data Science Trainee",
+    company: "Climate Resilience Observatory (CRO), Government of Uttar Pradesh",
+    location: "Lucknow, India",
+    desc: "Built XGBoost & Random Forest models to predict flood inundation across 4 UP rivers, achieving 77% accuracy; applied SMOTE for class imbalance and cleaned Hindi hydrological records to strengthen early warnings for 12 high-risk districts. Engineered a Python pipeline (JSON → SQL Server) with Folium & Plotly Dash for real-time lightning visualization, enabling 8-minute alerts via spatial-temporal analysis.",
+    tags: ["Python", "XGBoost", "Random Forest", "SQL Server", "Folium", "Plotly Dash", "SMOTE", "Spatial-Temporal Analysis"]
   }
 ];
 
@@ -238,10 +247,12 @@ function checkViewport() {
   const isMobile = window.innerWidth < 1024;
   if (isMobile) {
     compactView.classList.remove("hidden");
-    appGrid.classList.add("hidden");
+    appGrid.classList.add("mobile-view");
+    appGrid.classList.remove("hidden");
     mirrorActiveTabToMobile();
   } else {
     compactView.classList.add("hidden");
+    appGrid.classList.remove("mobile-view");
     appGrid.classList.remove("hidden");
   }
 }
@@ -337,7 +348,7 @@ function renderTabs() {
 
 function openFile(fileId) {
   if (fileId === "resume") {
-    window.open("Resume.pdf", "_blank");
+    window.open("tapas_ai.pdf", "_blank");
     showToast("📄 opening resume PDF...");
     return;
   }
@@ -635,7 +646,7 @@ const paletteOptions = [
   { name: "contact.css", id: "contact", desc: "Social handles & contact form", shortcut: "src" },
   { name: "skills.json", id: "skills", desc: "Show comprehensive tech stacks", shortcut: "data" },
   { name: "README.md", id: "readme", desc: "Display repository overview", shortcut: "root" },
-  { name: "Resume.pdf", id: "resume", desc: "Download PDF resume", shortcut: "root" },
+  { name: "tapas_ai.pdf", id: "resume", desc: "Download PDF resume", shortcut: "root" },
   { name: "Tapas' Copilot", id: "copilot", desc: "Toggle AI side assistant panel", shortcut: "tool" }
 ];
 
@@ -714,7 +725,7 @@ function runTerminalCmd(rawCmd) {
         &lt;dir&gt;&nbsp;&nbsp;src/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(home.tsx, about.html, projects.js, experience.ts, enterprise_projects.md, contact.css)<br>
         &lt;dir&gt;&nbsp;&nbsp;data/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(skills.json)<br>
         &lt;file&gt;&nbsp;README.md<br>
-        &lt;file&gt;&nbsp;Resume.pdf
+        &lt;file&gt;&nbsp;tapas_ai.pdf
       `;
       break;
     case "cat":
@@ -804,7 +815,7 @@ function getGenZPhrase() {
 const copilotKnowledgeBase = [
   {
     keys: ["who", "about", "bio", "tapas", "barman"],
-    reply: "Tapas Barman is an MLOps & AI Engineer pursuing M.Sc. Data Science at IIIT Lucknow. He has production experience at IIT Bombay and Aaizel Technologies, specializing in automated ML pipelines, secure CI/CD, and multi-agent AI systems."
+    reply: "Tapas Barman is an MLOps & AI Engineer pursuing M.Sc. Data Science at IIIT Lucknow. He has production experience at IIT Bombay, Aaizel Technologies, and the Climate Resilience Observatory (CRO), specializing in automated ML pipelines, secure CI/CD, and multi-agent AI systems."
   },
   {
     keys: ["education", "college", "school", "university", "degree", "graduate", "iiit", "lucknow"],
@@ -839,8 +850,8 @@ const copilotKnowledgeBase = [
     reply: "His technical stack includes Python, SQL, Bash/Linux, Docker, MLflow, DVC, Apache Airflow, Jenkins, SonarQube, Trivy, Gitleaks, LangGraph, and PyTorch. Check the **skills.json** tab in the sidebar for the full list!"
   },
   {
-    keys: ["experience", "job", "work", "intern", "aaizel", "iit", "bombay"],
-    reply: "Tapas works as an MLOps Engineer Intern at **Aaizel International Technologies** (Dec 2025–Present) and previously worked as an AI Software Research Intern at **IIT Bombay** (Jul 2025–Oct 2025) engineering Indic OCR subsystems."
+    keys: ["experience", "job", "work", "intern", "aaizel", "iit", "bombay", "cro", "observatory", "trainee"],
+    reply: "Tapas has worked in multiple roles:\n1. **MLOps Intern** at Aaizel International Technologies (Dec 2025 – Mar 2026)\n2. **AI Software Research Intern** at IIT Bombay (Jul 2025 – Oct 2025)\n3. **Data Science Trainee** at Climate Resilience Observatory (CRO), UP Government (Sep 2024 – Jun 2025)"
   },
   {
     keys: ["contact", "email", "reach", "hire", "collab", "linkedin", "message"],
@@ -881,7 +892,7 @@ function handleCopilotMessage(userText) {
   }
   
   if (!matchedReply) {
-    matchedReply = `I am Tapas' portfolio assistant. I couldn't match that query, but he works in Python, MLOps, and NLP at **Aaizel Technologies**. For specific questions, email him directly at **tapasb.dev@gmail.com** or open the **contact.css** tab to send a DM.`;
+    matchedReply = `I am Tapas' portfolio assistant. I couldn't match that query, but he has experience in Python, MLOps, and NLP at **Aaizel Technologies**. For specific questions, email him directly at **tapasb.dev@gmail.com** or open the **contact.css** tab to send a DM.`;
   }
   
   // Mix in a GenZ phrase if appropriate (replaces keyword template placeholders or appends)

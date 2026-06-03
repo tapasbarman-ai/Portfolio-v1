@@ -1321,14 +1321,44 @@ html, body {
 
 /* Compact layout for small viewports */
 @media (max-width: 1023px) {
-  .app-grid {
+  /* Disable retro custom cursor follower on mobile/touch screens */
+  #retro-cursor-outer, #retro-cursor-inner {
+    display: none !important;
+  }
+  html, body {
+    cursor: auto !important;
+  }
+
+  .app-compact {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     grid-template-rows: 44px 1fr 22px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "compact-topbar"
       "compact-content"
-      "status";
+      "compact-status";
   }
+
+  .app-grid.mobile-view {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: visible;
+    display: block;
+    border: none;
+    background: transparent;
+    pointer-events: none;
+  }
+  .app-grid.mobile-view > * {
+    pointer-events: auto; /* Re-enable pointer events for sidebar/copilot panels */
+  }
+  .app-grid.mobile-view > :not(.sidebar):not(.copilot-panel) {
+    display: none !important;
+  }
+
   .compact-topbar {
     grid-area: compact-topbar;
     background: var(--bg2);
@@ -1342,10 +1372,28 @@ html, body {
     grid-area: compact-content;
     overflow-y: auto;
     background: var(--bg);
+    min-height: 0; /* Critical: prevent grid item from expanding past viewport height */
   }
-  .title-bar, .menu-bar, .activity-bar, .sidebar, .editor-area, .terminal-panel, .copilot-panel {
+  .compact-status {
+    grid-area: compact-status;
+    background: var(--blue2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  /* Desktop layout containers: hide on mobile */
+  .title-bar, .menu-bar, .activity-bar, .editor-area, .terminal-panel {
     display: none !important;
   }
+  /* Do not use !important here so that Javascript style.display override works */
+  .sidebar, .copilot-panel {
+    display: none;
+  }
+
   .editor-content {
     padding: 24px 16px;
   }

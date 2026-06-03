@@ -8,7 +8,7 @@
   <meta property="og:title" content="Tapas Barman - Portfolio">
   <meta property="og:description" content="MLOps Engineer · AI Engineer · Data Scientist">
   <link rel="icon" type="image/png" href="https://github.com/tapasbarman-ai.png">
-  <link rel="stylesheet" href="assets/index.css">
+  <link rel="stylesheet" href="assets/index.css?v=1">
 </head>
 <body>
 
@@ -123,7 +123,7 @@
           </button>
           <button class="file-item download" data-file="resume" id="downloadResume">
             <span class="file-icon text-vscode-red">PDF</span>
-            Resume.pdf ↓
+            tapas_ai.pdf ↓
           </button>
         </div>
       </div>
@@ -225,7 +225,7 @@
                 <p class="text-sm text-vscode-text leading-loose">
                   Hi! I'm <strong class="text-vscode-blue font-medium">Tapas Barman</strong>, a results-driven MLOps and AI Engineer pursuing my M.Sc. in Data Science at IIIT Lucknow. I specialize in building end-to-end machine learning pipelines, LLM-powered agentic workflows, and secure DevSecOps pipelines.
                   <br><br>
-                  I currently work as an MLOps Engineer Intern at <strong class="text-vscode-pink font-medium">Aaizel International Technologies</strong>, orchestrating automated ETL and wind forecasting pipelines. Previously, I contributed production-grade OCR systems at <strong class="text-vscode-blue font-medium">IIT Bombay</strong>.
+                  I worked as an MLOps Intern at <strong class="text-vscode-pink font-medium">Aaizel International Technologies</strong>, orchestrating automated ETL and wind forecasting pipelines. Previously, I contributed production-grade OCR systems at <strong class="text-vscode-blue font-medium">IIT Bombay</strong>, and worked as a Data Science Trainee at the <strong class="text-vscode-blue font-medium">Climate Resilience Observatory (CRO)</strong>, UP Government, developing hydrological forecasting and real-time visualization systems.
                   <br><br>
                   I'm passionate about model governance, pipeline security, and translating complex data forecasting into real, quantified business impact (such as reducing wind generation forecasting penalties by 95%).
                 </p>
@@ -234,7 +234,7 @@
               <div class="point-list mb-6">
                 <div class="point-item">
                   <span>🔭</span>
-                  <span>Orchestrating production ML/ETL pipelines at <strong>Aaizel Technologies</strong></span>
+                  <span>Orchestrated production ML/ETL pipelines at <strong>Aaizel Technologies</strong></span>
                 </div>
                 <div class="point-item">
                   <span>🤖</span>
@@ -555,7 +555,22 @@
       <!-- The active editor content will be mirrored here on mobile view -->
     </div>
     <div class="compact-status">
-      <!-- Standard small status footer -->
+      <div class="status-left">
+        <div class="status-item">
+          <span>⎇ main</span>
+        </div>
+        <div class="status-item">
+          <span>⚠ 0</span>
+        </div>
+      </div>
+      <div class="status-right">
+        <div class="status-item" onclick="toggleCopilot()">
+          <span>🤖 Copilot</span>
+        </div>
+        <div class="status-item" onclick="toggleThemeDialog(true)">
+          <span>⚙ Themes</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -591,6 +606,6 @@
   <div class="toasts-container" id="toastsContainer"></div>
 
   <!-- Core Javascript Logic -->
-  <script src="assets/index.js"></script>
+  <script src="assets/index.js?v=1"></script>
 </body>
 </html>
