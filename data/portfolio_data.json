@@ -1,0 +1,312 @@
+{
+  "profile": {
+    "name": "Tapas Barman",
+    "title": "AI Engineer & Python Developer | LLM Evaluation & Safety",
+    "contact": {
+      "email": "tapasb.dev@gmail.com",
+      "phone": "+91-7363971909",
+      "linkedin": "https://www.linkedin.com/in/tapas-barman-2661161a0/",
+      "github": "https://github.com/tapasbarman-ai",
+      "portfolio": "https://github.com/tapasbarman-ai/Portfolio-v1",
+      "resume": "https://drive.google.com/file/d/1OTiuZ2yOuiOl9tajh5HMpuYVvZq5s2sJ/view?usp=sharing"
+    },
+    "location": {
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "country": "India"
+    },
+    "summary": "AI Engineer and Python Developer specializing in LLM evaluation & safety benchmarking (DeepEval, Ragas, GEval rubrics), autonomous agentic AI workflows (LangGraph), and distributed streaming architectures (Apache Kafka, PyFlink)."
+  },
+  "education": [
+    {
+      "institution": "Indian Institute of Information Technology, Lucknow (IIIT Lucknow)",
+      "degree": "MSc in Data Science",
+      "duration": "2024 - 2026",
+      "grade": "8.05 CGPA",
+      "location": "Lucknow, UP, India"
+    }
+  ],
+  "technical_skills": {
+    "programming_languages": ["Python", "SQL", "Bash"],
+    "ai_ml_core": [
+      "PyTorch",
+      "Scikit-learn",
+      "Hugging Face Transformers",
+      "LLMs",
+      "NLP",
+      "Computer Vision",
+      "Embeddings"
+    ],
+    "genai_and_agents": [
+      "LangChain",
+      "LangGraph",
+      "RAG",
+      "Prompt Engineering",
+      "LoRA",
+      "QLoRA",
+      "AI Agents",
+      "Tool Calling",
+      "RLHF",
+      "Model Alignment",
+      "Mathematical Reasoning",
+      "Expert Human Feedback"
+    ],
+    "rag_and_evaluation": [
+      "Reranking",
+      "Ragas",
+      "DeepEval",
+      "LLM Evaluation",
+      "Guardrails",
+      "LLM Reasoning Verification"
+    ],
+    "backend_and_apis": [
+      "FastAPI",
+      "Flask",
+      "REST APIs",
+      "HTTP",
+      "JSON",
+      "API Development"
+    ],
+    "databases": ["PostgreSQL", "MongoDB", "SQLite"],
+    "cloud_and_devops": [
+      "Docker",
+      "AWS (EC2, S3, ECR, IAM, RDS, Lambda)",
+      "CI/CD",
+      "GitHub Actions",
+      "Linux",
+      "Git"
+    ]
+  },
+  "work_experience": [
+    {
+      "role": "MLOps Intern",
+      "company": "Aaizel International Technologies Private Limited",
+      "location": "On-Site",
+      "duration": "Dec 2025 – Apr 2026",
+      "projects": [
+        {
+          "name": "Climate Forte",
+          "description": "Engineered a production-grade ETL and ML pipeline using Apache Airflow for data ingestion, model inference, and Amazon S3 storage.",
+          "highlights": [
+            "Automated model retraining and data/model drift monitoring using MLflow, DVC, Evidently, and Jenkins."
+          ]
+        },
+        {
+          "name": "VidyaDristi – OSINT",
+          "description": "Developed an ML backend for open-source intelligence gathering and entity resolution.",
+          "highlights": [
+            "Implemented Named Entity Recognition (NER), LLM embeddings, vector similarity search, and clustering for intelligence extraction."
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Computer Vision & AI Research Intern",
+      "company": "Indian Institute of Technology Bombay (IIT Bombay)",
+      "location": "Remote",
+      "duration": "July 2025 – Dec 2025",
+      "projects": [
+        {
+          "name": "Kalanjiyam",
+          "description": "Digital preservation and archiving platform for ancient Siddha literature using OCR-based digitization and proofreading.",
+          "highlights": [
+            "Leap OCR: Replaced legacy Tesseract engine with GPU-based EasyOCR, resulting in a 3x inference speedup and an 18% reduction in character errors.",
+            "Bhaasha OCR: Developed a table detection and structural reconstruction pipeline using YOLO + Transformers, achieving a 22% improvement in accuracy."
+          ]
+        }
+      ]
+    },
+    {
+      "role": "AI Trainer – Mathematics",
+      "company": "Outlier",
+      "location": "Remote",
+      "duration": "Jan 2025 – Jun 2025",
+      "projects": [
+        {
+          "name": "LLM Mathematical Reasoning & Alignment",
+          "description": "Reviewed and corrected LLM-generated mathematical outputs using expert human reasoning.",
+          "highlights": [
+            "Improved model responses by identifying reasoning errors, mathematical inaccuracies, and inconsistencies.",
+            "Provided corrected solutions and high-quality expert feedback for model alignment."
+          ]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Production MLOps Platform & Model Governance",
+      "tech_stack": [
+        "Python",
+        "Jenkins",
+        "MLflow",
+        "DVC",
+        "Docker",
+        "Evidently AI",
+        "SonarQube",
+        "Trivy",
+        "Gitleaks"
+      ],
+      "description": "Enterprise-grade automated MLOps pipeline featuring model validation quality gates and automated retraining.",
+      "metrics_and_impact": [
+        "Automated continuous data and model drift evaluation using Evidently AI with automated retraining triggers.",
+        "Embedded DevSecOps safety gates in Jenkins: SonarQube SAST, Trivy container CVE vulnerability scanning, and Gitleaks secret detection.",
+        "Champion-challenger model validation gating before production registry promotion."
+      ],
+      "evaluation_and_safety": "Evidently AI drift monitoring, SonarQube SAST, Trivy container CVE scans, Gitleaks secrets detection."
+    },
+    {
+      "name": "AI Trend Monitoring System",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "DeepEval",
+        "LangSmith",
+        "Hugging Face",
+        "Tavily",
+        "DistilBERT"
+      ],
+      "description": "Autonomous multi-step LangGraph agent pipeline tracking real-time AI developments with continuous evaluation.",
+      "metrics_and_impact": [
+        "Ingests posts from Twitter and Reddit, performing sentiment analysis and safety filtering using DistilBERT.",
+        "Enriches extracted signals with real-time web intelligence using Tavily search API.",
+        "Uses DeepEval for evaluating summary faithfulness, context relevance, and hallucination prevention.",
+        "Monitored end-to-end via LangSmith tracing for reasoning graph observability and anomaly detection."
+      ],
+      "evaluation_and_safety": "DeepEval metric evaluation (faithfulness, hallucination rate, answer relevancy), LangSmith tracing for agent execution observability."
+    },
+    {
+      "name": "Multi-Agent Medical AI Platform",
+      "tech_stack": [
+        "Python",
+        "LangChain",
+        "Flask",
+        "FAISS",
+        "Reranker",
+        "Groq LLaMA",
+        "Gemini",
+        "Tavily",
+        "PubMed",
+        "Ragas",
+        "Docker"
+      ],
+      "description": "Production-grade multi-agent clinical RAG system with automated medical safety guardrails and evaluation.",
+      "metrics_and_impact": [
+        "Orchestrated specialized agents for local document retrieval, PubMed research, and web verification.",
+        "Implemented cross-encoder reranking to ensure precise context retrieval without clinical hallucinations.",
+        "Integrated Ragas evaluation framework to track faithfulness, answer correctness, and context recall.",
+        "Enforced multi-tier safety guardrails: automated medical disclaimers, PII scrubbing, and clinical scope deflection."
+      ],
+      "evaluation_and_safety": "Ragas evaluation (faithfulness, context recall, correctness), PII scrubbing, clinical safety disclaimer enforcement, cross-encoder reranking."
+    },
+    {
+      "name": "LLM Safety Guardrails & Red-Teaming Suite",
+      "tech_stack": [
+        "Python",
+        "DeepEval",
+        "GEval",
+        "Pytest",
+        "Gemini",
+        "Golden Datasets"
+      ],
+      "description": "Automated red-teaming and safety benchmarking suite designed to stress-test production LLM applications against adversarial vulnerabilities.",
+      "metrics_and_impact": [
+        "Evaluates zero PII leakage under prompt extraction attacks and adversarial jailbreaks.",
+        "Enforces strict domain scope deflection with golden test suites and G-Eval alignment rubrics.",
+        "Benchmarks toxicity resilience and professional composure under hostile prompting using DeepEval metrics."
+      ],
+      "evaluation_and_safety": "PII leakage prevention, adversarial jailbreak defense, toxicity resilience scoring, GEval rubric evaluation."
+    },
+    {
+      "name": "Real-Time Meteorological Streaming Engine",
+      "tech_stack": [
+        "Python",
+        "Apache Kafka",
+        "Apache Flink",
+        "PyFlink",
+        "Docker Compose",
+        "Kafka Connectors"
+      ],
+      "description": "Real-time data engineering and distributed stream-processing pipeline ingesting meteorological and radiosonde telemetry.",
+      "metrics_and_impact": [
+        "Built Kafka producers to parse, merge, and stream atmospheric and flight data as real-time events.",
+        "Implemented PyFlink stream-processing jobs with keyed streams, event-time watermarking, and sliding/tumbling windows.",
+        "Containerized Kafka, Zookeeper, and Flink JobManager/TaskManager using Docker Compose for reproducible local deployment."
+      ],
+      "evaluation_and_safety": "Event-time watermarking for out-of-order data resilience, schema validation on streaming events, and fault-tolerant stateful recovery across Flink clusters."
+    },
+    {
+      "name": "Doodle.ai — AI-Powered Drawing Recognition Game",
+      "tech_stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Ollama",
+        "Google Gemini",
+        "Groq",
+        "REST APIs"
+      ],
+      "description": "Real-time interactive AI vision application comparing local and cloud-based multimodal models on user sketches.",
+      "metrics_and_impact": [
+        "Built an interactive drawing canvas with low-latency auto-guess inference and multimodal feedback.",
+        "Engineered a multi-provider backend comparing local edge models (Ollama) with cloud vision APIs (Gemini, Groq LLaMA-Vision).",
+        "Implemented Challenge and Sandbox modes with automated rate-limit handling and session controls."
+      ],
+      "evaluation_and_safety": "Multi-provider model latency vs. accuracy benchmarking, rate-limit safety fallbacks, and canvas input sanitization."
+    },
+    {
+      "name": "Lumina Focus — Calm Tech Productivity Workspace",
+      "tech_stack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Electron",
+        "Web Audio API"
+      ],
+      "description": "Desktop productivity and focus workspace combining customizable Pomodoro timer with a distraction-shield workflow, packaged for Windows.",
+      "metrics_and_impact": [
+        "Built customizable Pomodoro intervals (15–90 min) with task management and calendar scheduling.",
+        "Developed a multi-website focus hub with whitelisted productivity tools and a distraction shield.",
+        "Created productivity analytics tracking daily goals, focus hours, and 7-day category trends.",
+        "Packaged as native Windows desktop application using Electron with MSIX/APPX deployment support."
+      ],
+      "evaluation_and_safety": "Whitelisted distraction-shield workflow preventing attention drift, client-side data privacy with zero external tracking, and offline state persistence."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "TCS CodeVita 2025",
+      "detail": "Secured global rank 585 out of 20,540 participants (Top 2.8%)."
+    },
+    {
+      "title": "Meta Hacker Cup 2025",
+      "detail": "Achieved a global rank under 2000."
+    },
+    {
+      "title": "OpenAI Open Model Hackathon",
+      "detail": "Successfully developed and submitted an open-weights model project."
+    },
+    {
+      "title": "Competitive Programming",
+      "detail": "Solved 200+ algorithmic problems on LeetCode."
+    }
+  ],
+  "frequently_asked_questions": [
+    {
+      "question": "What roles is Tapas targeting?",
+      "answer": "Tapas is targeting AI Engineer, LLM Evaluation & Safety Engineer, and Python Developer positions."
+    },
+    {
+      "question": "What is Tapas' strongest skill set?",
+      "answer": "His strongest domain is bridging the gap between rigorous LLM evaluation & safety (benchmarking faithfulness, hallucination, and guardrails via DeepEval and Ragas), stateful agentic workflows (LangGraph), and distributed Python systems (Apache Kafka, PyFlink)."
+    },
+    {
+      "question": "Does Tapas have experience with LLM evaluation?",
+      "answer": "Yes. He has hands-on experience using both Ragas and DeepEval to quantitatively benchmark faithfulness, context precision, answer relevance, hallucination rate, and toxicity resilience, along with LangSmith for agent execution tracing."
+    },
+    {
+      "question": "Can Tapas work with cloud services and containerization?",
+      "answer": "Yes. He works extensively with Docker and AWS services including EC2, S3, ECR, IAM, RDS, and Lambda, backed by automated CI/CD using GitHub Actions."
+    }
+  ]
+}

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tapas Barman | Portfolio</title>
-  <meta name="description" content="MLOps Engineer | AI Engineer | Data Scientist · IIIT Lucknow M.Sc. Data Science">
-  <meta property="og:title" content="Tapas Barman - Portfolio">
-  <meta property="og:description" content="MLOps Engineer · AI Engineer · Data Scientist">
+  <title>Tapas Barman | AI Engineer &amp; Python Developer</title>
+  <meta name="description" content="AI Engineer | LLM Evaluation &amp; Safety | Python Developer · IIIT Lucknow M.Sc. Data Science">
+  <meta property="og:title" content="Tapas Barman - AI Engineer &amp; Python Developer">
+  <meta property="og:description" content="AI Engineer · LLM Evaluation &amp; Safety · Python Developer · Distributed Systems">
   <link rel="icon" type="image/png" href="https://github.com/tapasbarman-ai.png">
-  <link rel="stylesheet" href="assets/index.css?v=1">
+  <link rel="stylesheet" href="assets/index.css?v=6">
 </head>
 <body>
 
@@ -91,10 +91,6 @@
             <span class="file-icon text-vscode-blue">ts</span>
             experience.ts
           </button>
-          <button class="file-item" data-file="enterprise_projects">
-            <span class="file-icon text-vscode-blue">M↓</span>
-            enterprise_projects.md
-          </button>
           <button class="file-item" data-file="contact">
             <span class="file-icon text-vscode-pink">#</span>
             contact.css
@@ -121,9 +117,9 @@
             <span class="file-icon text-vscode-blue">M↓</span>
             README.md
           </button>
-          <button class="file-item download" data-file="resume" id="downloadResume">
+          <button class="file-item download" data-file="resume" id="downloadResume" onclick="openFile('resume')" title="View Tapas's Resume (PDF)">
             <span class="file-icon text-vscode-red">PDF</span>
-            tapas_ai.pdf ↓
+            tapas_ai.pdf ↗
           </button>
         </div>
       </div>
@@ -160,54 +156,136 @@
             <div class="page-container active" id="page-home">
               <div class="home-wrapper">
                 <div class="home-content">
-                  <p class="text-xs text-vscode-green mb-3">// hello world !! Welcome to my portfolio</p>
+                  <div class="hero-status-pill mb-3">
+                    <span class="status-pulse-dot"></span>
+                    <span>LLM EVALUATION · AI SYSTEMS · PYTHON ARCHITECTURE</span>
+                  </div>
                   
-                  <div class="home-title-box mb-4">
-                    <h1 class="font-display font-extrabold leading-loose text-vscode-bright tracking-tight" style="font-size: clamp(34px, 5.5vw, 62px);">
-                      Tapas<br>
-                      <span class="text-vscode-pink" style="display: inline-block; border-bottom: 3.5px solid var(--pink); line-height: 1.0; padding-bottom: 6px;">Barman</span>
+                  <div class="home-title-box mb-3">
+                    <h1 class="font-display font-extrabold tracking-tight text-vscode-bright" style="font-size: clamp(34px, 5vw, 54px); line-height: 1.1;">
+                      Tapas <span class="hero-name-accent">Barman</span>
                     </h1>
                   </div>
 
                   <div class="badge-row mb-4">
-                    <span class="badge"><span style="width: 7px; height: 7px; border-radius: 50%; background: #4ec9b0;"></span>MLOps Engineer</span>
+                    <span class="badge"><span style="width: 7px; height: 7px; border-radius: 50%; background: #4ec9b0;"></span>LLM Evaluation & Safety</span>
                     <span class="badge"><span style="width: 7px; height: 7px; border-radius: 50%; background: #c586c0;"></span>AI Engineer</span>
-                    <span class="badge"><span style="width: 7px; height: 7px; border-radius: 50%; background: #4fc1ff;"></span>Data Scientist</span>
-                    <span class="badge" style="border-color: rgba(255, 111, 216, 0.4); color: var(--pink);"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--pink);"></span>@ IIIT Lucknow</span>
+                    <span class="badge"><span style="width: 7px; height: 7px; border-radius: 50%; background: #4fc1ff;"></span>Python Developer</span>
+                    <span class="badge" style="border-color: rgba(255, 111, 216, 0.4); color: var(--pink);"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--pink);"></span>M.Sc. Data Science @ IIIT Lucknow</span>
                   </div>
 
-                  <p class="text-sm text-vscode-dim mb-4" id="typewriterText" style="min-height: 20px;">
+                  <p class="text-sm text-vscode-dim mb-4" id="typewriterText" style="min-height: 22px;">
                     <span class="text-vscode-pink animate-blink">|</span>
                   </p>
 
-                  <p class="text-md text-vscode-dim leading-loose mb-6" style="max-width: 520px;">
-                    I live at the crossroads of <strong class="text-vscode-blue font-semibold">MLOps</strong>, <strong class="text-vscode-blue font-semibold">AI engineering</strong>, and <strong class="text-vscode-blue font-semibold">applied data science</strong>. I design systems that are genuinely <strong class="text-vscode-blue font-semibold">automated, secure, and business-driven</strong>.
+                  <p class="text-sm text-vscode-dim leading-relaxed mb-6" style="max-width: 540px; font-size: 13.5px; line-height: 1.7;">
+                    AI Engineer and Python Developer specializing in <strong class="text-vscode-blue font-semibold">rigorous LLM evaluation & safety</strong>, <strong class="text-vscode-blue font-semibold">autonomous agentic workflows</strong>, and <strong class="text-vscode-blue font-semibold">high-throughput distributed streaming</strong>. I engineer automated verification suites with DeepEval & Ragas, production-grade multi-agent systems with LangGraph, and resilient backends powered by Apache Kafka & PyFlink.
                   </p>
 
                   <div class="cta-group mb-6">
-                    <button class="btn btn-primary" onclick="openFile('projects')">📁 Projects</button>
-                    <button class="btn btn-secondary" onclick="openFile('about')">👤 About Me</button>
-                    <button class="btn btn-secondary" onclick="openFile('contact')">✉ Contact</button>
+                    <button class="btn btn-primary" onclick="openFile('projects')">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                      Featured Projects
+                    </button>
+                    <button class="btn btn-secondary" onclick="openFile('about')">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                      Engineering Background
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleCopilot(true)" style="border-color: rgba(255, 111, 216, 0.5); color: var(--pink); font-weight: 600;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5L12 2z"/></svg>
+                      Ask AI Copilot
+                    </button>
+                    <button class="btn btn-secondary" onclick="toggleGuide(true)" style="border-color: rgba(79, 193, 255, 0.4); color: var(--blue);">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                      Quick Tour
+                    </button>
+                    <button class="btn btn-secondary" onclick="openFile('resume')" style="border-color: rgba(78, 201, 176, 0.4); color: var(--green); font-weight: 600;">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                      Resume / CV ↗
+                    </button>
+                    <button class="btn btn-secondary" onclick="openFile('contact')">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                      Get in Touch
+                    </button>
                   </div>
                 </div>
 
-                <div class="home-avatar"></div>
+                <!-- Professional Artistic Avatar & Clean Engineering Status -->
+                <div class="home-visual">
+                  <div class="avatar-halo-wrapper">
+                    <div class="home-avatar-circle"></div>
+                    <div class="avatar-status-capsule">
+                      <span class="status-pulse-dot" style="background: #4ade80; box-shadow: 0 0 8px #4ade80;"></span>
+                      <span>Open to AI &amp; LLM Eval Roles</span>
+                    </div>
+                  </div>
+                  <div class="avatar-cli-snippet">
+                    <span style="color: var(--blue);">$</span>
+                    <code>pytest tests/test_eval.py</code>
+                    <span class="status-ok">✔ 4 passed (DeepEval &amp; Ragas)</span>
+                  </div>
+                </div>
               </div>
 
-              <!-- Stats Grid -->
-              <div class="stats-grid" style="margin-top: 40px;">
+              <!-- Metrics & Impact Grid -->
+              <div class="stats-grid">
                 <div class="stat-card">
-                  <h3 class="text-xl font-bold text-vscode-pink">M.Sc.</h3>
-                  <p class="text-xs text-vscode-dim">IIIT Lucknow</p>
+                  <div class="stat-card-val text-vscode-green">0.94+</div>
+                  <div class="stat-card-label">DeepEval Faithfulness & Hallucination Gating</div>
                 </div>
                 <div class="stat-card">
-                  <h3 class="text-xl font-bold text-vscode-blue">3+</h3>
-                  <p class="text-xs text-vscode-dim">Production Roles</p>
+                  <div class="stat-card-val text-vscode-blue">Top 2.8%</div>
+                  <div class="stat-card-label">TCS CodeVita 2025 (Global Rank 585 / 20k)</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-val text-vscode-yellow">P99 &lt; 45ms</div>
+                  <div class="stat-card-label">Real-Time Kafka & PyFlink Telemetry</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card-val text-vscode-pink">8.05 / 10</div>
+                  <div class="stat-card-label">M.Sc. Data Science · IIIT Lucknow</div>
+                </div>
+              </div>
+
+              <!-- Architecture Pillars Showcase -->
+              <div class="pillars-grid">
+                <div class="pillar-card">
+                  <div class="pillar-number text-vscode-green">01 // EVALUATION & SAFETY</div>
+                  <div class="pillar-title">LLM Evaluation & Red-Teaming</div>
+                  <div class="pillar-desc">Automated evaluation suites leveraging DeepEval, Ragas, and custom GEval rubrics. Stress-testing models against prompt injection, PII leakage, toxicity, and hallucination drift.</div>
+                  <div class="pillar-tags">
+                    <span class="pillar-tag">DeepEval</span>
+                    <span class="pillar-tag">Ragas</span>
+                    <span class="pillar-tag">Red-Teaming</span>
+                    <span class="pillar-tag">GEval Rubrics</span>
+                    <span class="pillar-tag">Safety Guardrails</span>
+                  </div>
                 </div>
 
-                <div class="stat-card">
-                  <h3 class="text-xl font-bold text-vscode-yellow">AIR 1200</h3>
-                  <p class="text-xs text-vscode-dim">IIT-JAM Physics Rank</p>
+                <div class="pillar-card">
+                  <div class="pillar-number text-vscode-blue">02 // AGENTIC ARCHITECTURES</div>
+                  <div class="pillar-title">Autonomous AI Systems</div>
+                  <div class="pillar-desc">Stateful multi-agent architectures with LangGraph, cyclic reasoning, and clinical RAG retrieval. Multi-provider benchmarking comparing local edge models with cloud vision APIs.</div>
+                  <div class="pillar-tags">
+                    <span class="pillar-tag">LangGraph</span>
+                    <span class="pillar-tag">Multi-Agent</span>
+                    <span class="pillar-tag">RAG</span>
+                    <span class="pillar-tag">Multimodal Vision</span>
+                    <span class="pillar-tag">Vector Search</span>
+                  </div>
+                </div>
+
+                <div class="pillar-card">
+                  <div class="pillar-number text-vscode-yellow">03 // PYTHON & STREAMING</div>
+                  <div class="pillar-title">Distributed Python Engineering</div>
+                  <div class="pillar-desc">Event-driven pipelines ingesting high-frequency atmospheric telemetry using Apache Kafka and PyFlink with event-time windowing, Docker orchestration, and automated CI/CD.</div>
+                  <div class="pillar-tags">
+                    <span class="pillar-tag">Python</span>
+                    <span class="pillar-tag">Apache Kafka</span>
+                    <span class="pillar-tag">Apache Flink</span>
+                    <span class="pillar-tag">Docker Compose</span>
+                    <span class="pillar-tag">CI/CD</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -216,42 +294,54 @@
             <div class="page-container" id="page-about">
               <p class="text-vscode-gcm italic text-xs mb-3">&lt;!-- about.html - Tapas Barman --&gt;</p>
               <h2 class="font-display text-2xl font-extrabold text-vscode-bright tracking-tight mb-2">About Me</h2>
-              <p class="text-vscode-dim text-xs mb-4">// who I am · what I do · where I build</p>
+              <p class="text-vscode-dim text-xs mb-4">// background · core competencies · engineering philosophy</p>
               
               <div class="card mb-6">
-                <p class="text-sm text-vscode-text leading-loose">
-                  Hi! I'm <strong class="text-vscode-blue font-medium">Tapas Barman</strong>, a results-driven MLOps and AI Engineer pursuing my M.Sc. in Data Science at IIIT Lucknow. I specialize in building end-to-end machine learning pipelines, LLM-powered agentic workflows, and secure DevSecOps pipelines.
+                <p class="text-sm text-vscode-text leading-relaxed">
+                  I am <strong class="text-vscode-blue font-medium">Tapas Barman</strong>, an AI Engineer and Python Developer pursuing my M.Sc. in Data Science at IIIT Lucknow. My core focus centers on <strong class="text-vscode-green font-medium">rigorous LLM evaluation & safety</strong>, <strong class="text-vscode-pink font-medium">autonomous multi-agent workflows (LangGraph)</strong>, and <strong class="text-vscode-blue font-medium">distributed streaming data engineering (Apache Kafka/PyFlink)</strong>.
                   <br><br>
-                  I worked as an MLOps Intern at <strong class="text-vscode-pink font-medium">Aaizel International Technologies</strong>, orchestrating automated ETL and wind forecasting pipelines. Previously, I contributed production-grade OCR systems at <strong class="text-vscode-blue font-medium">IIT Bombay</strong>, and worked as a Data Science Trainee at the <strong class="text-vscode-blue font-medium">Climate Resilience Observatory (CRO)</strong>, UP Government, developing hydrological forecasting and real-time visualization systems.
+                  My engineering background spans evaluating and aligning production LLMs with expert human feedback at <strong class="text-vscode-blue font-medium">Outlier</strong> (advancing mathematical reasoning and alignment), architecting automated ETL & MLOps pipelines at <strong class="text-vscode-pink font-medium">Aaizel International Technologies</strong>, and engineering high-accuracy OCR extraction systems at <strong class="text-vscode-blue font-medium">IIT Bombay</strong>.
                   <br><br>
-                  I'm passionate about model governance, pipeline security, and translating complex data forecasting into real, quantified business impact (such as reducing wind generation forecasting penalties by 95%).
+                  I approach machine learning through an evaluation-first and reliability-first lens: stress-testing safety boundaries with DeepEval and Ragas, eliminating PII leakage, and engineering fault-tolerant Python backends designed to perform under high-concurrency production demands.
                 </p>
               </div>
 
               <div class="point-list mb-6">
                 <div class="point-item">
-                  <span>🔭</span>
-                  <span>Orchestrated production ML/ETL pipelines at <strong>Aaizel Technologies</strong></span>
+                  <span class="text-vscode-blue" style="display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <span>Benchmarking LLM safety, faithfulness, and hallucination gating using <strong>DeepEval</strong>, <strong>Ragas</strong>, and custom <strong>GEval</strong> rubrics</span>
                 </div>
                 <div class="point-item">
-                  <span>🤖</span>
-                  <span>Engineering multi-agent systems using LangGraph & Groq LLaMA</span>
+                  <span class="text-vscode-pink" style="display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                  </span>
+                  <span>Architecting autonomous multi-agent systems using <strong>LangGraph</strong>, cyclic reasoning, and clinical RAG retrieval</span>
                 </div>
                 <div class="point-item">
-                  <span>🌱</span>
-                  <span>Hardening deployments with SonarQube, Trivy, and Jenkins CI/CD</span>
+                  <span class="text-vscode-yellow" style="display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  </span>
+                  <span>Developing distributed stream-processing pipelines with <strong>Apache Kafka</strong>, <strong>PyFlink</strong>, and <strong>Docker Compose</strong></span>
                 </div>
                 <div class="point-item">
-                  <span>💬</span>
-                  <span>Talk to me about Apache Airflow, Docker, MLflow, and Git</span>
+                  <span class="text-vscode-green" style="display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </span>
+                  <span>Evaluated and refined LLM reasoning, code quality, and alignment with expert feedback at <strong>Outlier</strong></span>
                 </div>
                 <div class="point-item">
-                  <span>⚡</span>
-                  <span>Proven business impact: 1.41 Cr projected annual savings via ML</span>
+                  <span class="text-vscode-blue" style="display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/><path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"/></svg>
+                  </span>
+                  <span>Securing model deployments with automated CI/CD gating, <strong>SonarQube SAST</strong>, <strong>Trivy</strong>, and <strong>Gitleaks</strong></span>
                 </div>
                 <div class="point-item">
-                  <span>✨</span>
-                  <span>Active LeetCoder & Kaggle NLP practitioner</span>
+                  <span class="text-vscode-pink" style="display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </span>
+                  <span>TCS CodeVita 2025 Global Rank <strong>585 / 20,540</strong> (Top 2.8%) & 200+ algorithmic problems solved in Python</span>
                 </div>
               </div>
 
@@ -259,22 +349,26 @@
               <div class="grid-2">
                 <div class="card">
                   <div class="flex items-center gap-2 mb-2">
-                    <span class="text-lg">🎓</span>
+                    <span class="text-vscode-blue" style="display: flex; align-items: center;">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </span>
                     <h4 class="font-bold text-vscode-bright">IIIT Lucknow</h4>
                   </div>
                   <p class="text-xs text-vscode-dim mb-1">Lucknow, UP | 2024 – 2026</p>
                   <p class="text-sm text-vscode-text mb-2">M.Sc. in Data Science</p>
-                  <p class="text-xs text-vscode-blue">Focus: Machine Learning, Big Data, MLOps</p>
-                  <p class="text-xs text-vscode-green mt-1">SGPA: 8.85 / 10.0</p>
+                  <p class="text-xs text-vscode-blue">Focus: Machine Learning, LLM Evaluation, Distributed Systems</p>
+                  <p class="text-xs text-vscode-green mt-1">CGPA: 8.05 / 10.0</p>
                 </div>
                 <div class="card">
                   <div class="flex items-center gap-2 mb-2">
-                    <span class="text-lg">🏫</span>
+                    <span class="text-vscode-yellow" style="display: flex; align-items: center;">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+                    </span>
                     <h4 class="font-bold text-vscode-bright">APC Roy Govt College (NBU)</h4>
                   </div>
                   <p class="text-xs text-vscode-dim mb-1">Siliguri, WB | 2020 – 2023</p>
                   <p class="text-sm text-vscode-text mb-2">B.Sc. in Physics</p>
-                  <p class="text-xs text-vscode-dim">Focus: Physics & Applied Mathematics</p>
+                  <p class="text-xs text-vscode-dim">Focus: Physics & Applied Mathematics (IIT-JAM Physics AIR 1200)</p>
                   <p class="text-xs text-vscode-green mt-1">CGPA: 8.23 / 10.0</p>
                 </div>
               </div>
@@ -293,67 +387,58 @@
 
             <!-- Dynamic Content: Experience Tab -->
             <div class="page-container" id="page-experience">
-              <p class="text-vscode-gcm italic text-xs mb-3">// experience.ts - professional journey</p>
-              <h2 class="font-display text-2xl font-extrabold text-vscode-bright tracking-tight mb-2">Experience</h2>
-              <p class="text-vscode-dim text-xs mb-6">interface Career extends Timeline {}</p>
+              <p class="text-vscode-gcm italic text-xs mb-3">// experience.ts - professional journey &amp; competitive honors</p>
+              <h2 class="font-display text-2xl font-extrabold text-vscode-bright tracking-tight mb-2">Experience &amp; Key Achievements</h2>
+              <p class="text-vscode-dim text-xs mb-6">interface CareerRecord { roles: ProductionExperience[]; honors: GlobalCompetitions[]; }</p>
 
+              <!-- Standout Honors & Algorithmic Achievements Grid -->
+              <h3 class="text-xs uppercase tracking-widest text-vscode-yellow mb-3 pb-1" style="border-bottom: 1.5px solid var(--border)">Standout Honors &amp; Competitions</h3>
+              <div class="honors-grid">
+                <div class="honor-card">
+                  <div class="honor-header">
+                    <span class="honor-badge text-vscode-pink">GLOBAL TOP 2.8%</span>
+                    <span class="honor-year">2025</span>
+                  </div>
+                  <h4 class="honor-title">TCS CodeVita 2025</h4>
+                  <div class="honor-metric text-vscode-bright">Global Rank 585 <span class="text-xs text-vscode-dim">/ 20,540</span></div>
+                  <p class="honor-desc">Secured global rank 585 out of 20,540 participants worldwide in one of the world's largest competitive programming tournaments.</p>
+                </div>
+
+                <div class="honor-card">
+                  <div class="honor-header">
+                    <span class="honor-badge text-vscode-yellow">AIR 1200</span>
+                    <span class="honor-year">2024</span>
+                  </div>
+                  <h4 class="honor-title">IIT-JAM Physics</h4>
+                  <div class="honor-metric text-vscode-bright">All India Rank 1200</div>
+                  <p class="honor-desc">National competition conducted by the Indian Institutes of Technology across advanced mathematics, calculus, and computational modeling.</p>
+                </div>
+
+                <div class="honor-card">
+                  <div class="honor-header">
+                    <span class="honor-badge text-vscode-blue">GLOBAL &lt; 2000</span>
+                    <span class="honor-year">2025</span>
+                  </div>
+                  <h4 class="honor-title">Meta Hacker Cup 2025</h4>
+                  <div class="honor-metric text-vscode-bright">Rank &lt; 2000</div>
+                  <p class="honor-desc">Advanced through global qualification rounds solving complex graph algorithms, tree optimizations, and computational challenges.</p>
+                </div>
+
+                <div class="honor-card">
+                  <div class="honor-header">
+                    <span class="honor-badge text-vscode-green">ALGORITHMIC PYTHON</span>
+                    <span class="honor-year">Active</span>
+                  </div>
+                  <h4 class="honor-title">LeetCode &amp; Problem Solving</h4>
+                  <div class="honor-metric text-vscode-bright">200+ Problems Solved</div>
+                  <p class="honor-desc">Consistent algorithmic practice in Python spanning dynamic programming, graph traversals, data structures, and computational optimization.</p>
+                </div>
+              </div>
+
+              <!-- Work Experience Timeline -->
+              <h3 class="text-xs uppercase tracking-widest text-vscode-yellow mb-4 pb-1" style="border-bottom: 1.5px solid var(--border)">Production Work Experience</h3>
               <div class="timeline" id="experienceTimeline">
                 <!-- Experiences will be generated dynamically by JS -->
-              </div>
-            </div>
-
-            <!-- Dynamic Content: Enterprise Projects Tab -->
-            <div class="page-container" id="page-enterprise_projects">
-              <p class="text-vscode-gcm italic text-xs mb-3">// enterprise_projects.md — My Enterprise Projects @ Aaizel Tech</p>
-              <h2 class="font-display text-2xl font-extrabold text-vscode-bright tracking-tight mb-1">Enterprise Projects</h2>
-              <p class="text-vscode-dim text-xs mb-4">// Production MLOps & ETL pipelines I built during my internship</p>
-
-              <div class="card mb-6" style="border-left: 3px solid var(--green); background: rgba(78, 201, 176, 0.02); padding: 16px;">
-                <p class="text-xs text-vscode-text leading-relaxed">
-                  During my internship at <strong>Aaizel International Technologies</strong>, I worked on the data engineering, ingestion (ETL), and model operationalization (MLOps) pipelines for these two primary platforms:
-                </p>
-              </div>
-
-              <div class="project-list" style="display: flex; flex-direction: column; gap: 16px;">
-                
-                <!-- Project 1: Weather (ClimateForte) API & DSM Optimizer -->
-                <div class="card" style="border-left: 3px solid var(--orange); background: rgba(206, 145, 120, 0.01); display: flex; flex-direction: column; gap: 8px;">
-                  <div class="flex justify-between items-center">
-                    <h3 class="text-md font-bold text-vscode-bright">🌐 Weather (ClimateForte) API & Wind DSM Optimizer</h3>
-                    <div style="display: flex; gap: 6px;">
-                      <a class="btn btn-primary py-1 px-3 text-[11px]" href="https://www.aaizeltech.com/climateforte" target="_blank" style="text-decoration: none;">🚀 ClimateForte</a>
-                      <a class="btn btn-primary py-1 px-3 text-[11px]" href="https://www.aaizeltech.com/weather-api" target="_blank" style="text-decoration: none;">🚀 Weather API</a>
-                    </div>
-                  </div>
-                  <p class="text-xs text-vscode-dim">
-                    Designed and built the physics-informed wind power forecasting ML pipeline for a 75 MW generation plant (reducing grid penalty liabilities by <strong>95%</strong>, saving ~1.41 Cr/yr). Architected high-concurrency FastAPI REST endpoints serving 80+ weather layers and 3-km tile telemetry data to enterprise clients.
-                  </p>
-                  <div class="badge-row">
-                    <span class="tag">XGBoost</span>
-                    <span class="tag">FastAPI</span>
-                    <span class="tag">Apache Airflow</span>
-                    <span class="tag">MLflow</span>
-                    <span class="tag">DVC</span>
-                  </div>
-                </div>
-
-                <!-- Project 2: Radiosonde System -->
-                <div class="card" style="border-left: 3px solid var(--blue); background: rgba(79, 193, 255, 0.01); display: flex; flex-direction: column; gap: 8px;">
-                  <div class="flex justify-between items-center">
-                    <h3 class="text-md font-bold text-vscode-bright">🎈 Radiosonde (Upper-Air Sounding)</h3>
-                    <a class="btn btn-primary py-1 px-3 text-[11px]" href="https://www.aaizeltech.com/radiosonde" target="_blank" style="text-decoration: none;">🚀 Radiosonde</a>
-                  </div>
-                  <p class="text-xs text-vscode-dim">
-                    Engineered high-frequency ETL pipelines processing upper-air weather telemetry (wind speed/direction, pressure, temperature, and humidity) from surface to 30km stratosphere. Configured parquet data conversion, vertical profile validation checks, and telemetry logging in MinIO/S3.
-                  </p>
-                  <div class="badge-row">
-                    <span class="tag">Python</span>
-                    <span class="tag">MinIO / S3</span>
-                    <span class="tag">Parquet Data</span>
-                    <span class="tag">ETL Ingestion</span>
-                  </div>
-                </div>
-
               </div>
             </div>
 
@@ -399,16 +484,63 @@
 
             <!-- Dynamic Content: Skills Tab -->
             <div class="page-container" id="page-skills">
-              <p class="text-vscode-gcm italic text-xs mb-3">// skills.json — tech stack & tools I actually use</p>
-              <h2 class="font-display text-2xl font-extrabold text-vscode-bright tracking-tight mb-2">Skills</h2>
-              <p class="text-vscode-dim text-xs mb-6">{ "status": "always_learning", "passion": "immeasurable" }</p>
+              <p class="text-vscode-gcm italic text-xs mb-2">// skills.json — technical proficiencies &amp; production architecture stack</p>
+              <div class="flex items-center justify-between flex-wrap gap-2 mb-1">
+                <h2 class="font-display text-xl md:text-2xl font-extrabold text-vscode-bright tracking-tight">Technical Capabilities &amp; Stack</h2>
+                <span class="text-xs text-vscode-dim font-mono" style="background: rgba(255,255,255,0.03); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--border)">
+                  <span class="text-vscode-green">●</span> Production Verified · 6 Core Domains
+                </span>
+              </div>
+              <p class="text-vscode-dim text-xs mb-3">interface TechStack { primary: [LLM_Evaluation, Agentic_AI, Python_Systems]; infra: [MLOps, DevSecOps, CV]; }</p>
 
-              <div class="grid-2" id="skillsGrid" style="margin-bottom: 24px;">
+              <!-- Filterable Domain Buttons -->
+              <div class="skills-filter-bar mb-3" id="skillsFilterBar">
+                <button class="skills-filter-btn active" data-filter="all">All Disciplines (6)</button>
+                <button class="skills-filter-btn" data-filter="llm-eval">LLM Evaluation &amp; Safety</button>
+                <button class="skills-filter-btn" data-filter="agentic-ai">Agentic AI &amp; GenAI</button>
+                <button class="skills-filter-btn" data-filter="python-backend">Python &amp; Systems</button>
+                <button class="skills-filter-btn" data-filter="mlops-infra">MLOps &amp; Pipelines</button>
+                <button class="skills-filter-btn" data-filter="devsecops">DevSecOps &amp; QA</button>
+                <button class="skills-filter-btn" data-filter="vision-doc">Vision &amp; Doc AI</button>
+              </div>
+
+              <!-- Main Skills Grid -->
+              <div class="skills-domains-grid" id="skillsGrid">
                 <!-- Skill groups will be generated dynamically -->
               </div>
 
-              <div class="card">
-                <h3 class="text-xs uppercase tracking-widest text-vscode-yellow mb-3 pb-1" style="border-bottom: 1.5px solid var(--border)">Also familiar with</h3>
+              <!-- Core Engineering Standards & Verification Principles -->
+              <h3 class="text-xs uppercase tracking-widest text-vscode-yellow mb-3 mt-6 pb-1" style="border-bottom: 1.5px solid var(--border)">Production Engineering Standards</h3>
+              <div class="engineering-standards-grid">
+                <div class="standard-card">
+                  <div class="standard-card-icon" style="color: #4ec9b0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                  </div>
+                  <h4 class="standard-card-title">Evaluation-First Delivery</h4>
+                  <p class="standard-card-desc">No agent or generative system is promoted without deterministic golden test suites, GEval faithfulness gates, and automated PII leakage audits.</p>
+                </div>
+                <div class="standard-card">
+                  <div class="standard-card-icon" style="color: #ff6fd8;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6z"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
+                  <h4 class="standard-card-title">Mathematical &amp; Algorithmic Rigor</h4>
+                  <p class="standard-card-desc">Rooted in B.Sc. Physics (IIT-JAM AIR 1200) and competitive programming (TCS CodeVita Rank 585), applying formal proof validation and algorithmic efficiency to complex AI pipelines.</p>
+                </div>
+                <div class="standard-card">
+                  <div class="standard-card-icon" style="color: #38bdf8;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 8 3 3-3 3M14 14h2"/></svg>
+                  </div>
+                  <h4 class="standard-card-title">Production DevSecOps &amp; Strict Typing</h4>
+                  <p class="standard-card-desc">Strict type safety (Pydantic v2 / mypy), containerized microservices (Docker Compose), event streaming (Kafka/PyFlink), and automated CI/CD security scanning (SonarQube, Trivy, Gitleaks).</p>
+                </div>
+              </div>
+
+              <!-- Complete Tooling & Ecosystem Cloud -->
+              <div class="card mt-6">
+                <div class="flex items-center justify-between mb-3 pb-1" style="border-bottom: 1.5px solid var(--border)">
+                  <h3 class="text-xs uppercase tracking-widest text-vscode-yellow">Complete Tooling &amp; Infrastructure Cloud</h3>
+                  <span class="text-[10px] text-vscode-dim font-mono">// click any tag to query copilot</span>
+                </div>
                 <div class="badge-row" id="alsoFamiliarBadges">
                   <!-- Badges will be generated -->
                 </div>
@@ -418,49 +550,54 @@
             <!-- Dynamic Content: README Tab -->
             <div class="page-container" id="page-readme">
               <h1 class="font-display text-2xl font-extrabold text-vscode-bright mb-2" style="border-bottom: 1px solid var(--border); padding-bottom: 8px;">Tapas Barman</h1>
-              <p class="text-xs text-vscode-dim mb-4">MLOps Engineer | AI Engineer | Data Scientist · India 🇮🇳</p>
+              <p class="text-xs text-vscode-dim mb-4">AI Engineer · LLM Evaluation & Safety · Python Developer</p>
               
               <div class="badge-row mb-4">
-                <span class="badge" style="background: rgba(53, 114, 165, 0.1); border-color: #3572a5; color: #3572a5;">🔵 Python</span>
-                <span class="badge" style="background: rgba(78, 201, 176, 0.1); border-color: #4ec9b0; color: #4ec9b0;">⚡ Apache Airflow</span>
-                <span class="badge" style="background: rgba(49, 120, 198, 0.1); border-color: #3178c6; color: #3178c6;">⚙ MLOps (MLflow/DVC)</span>
-                <span class="badge" style="background: rgba(255, 111, 216, 0.1); border-color: #ff6fd8; color: #ff6fd8;">🤖 LangGraph / Agentic</span>
-                <span class="badge" style="background: rgba(239, 68, 68, 0.1); border-color: #ef4444; color: #ef4444;">🔥 PyTorch</span>
+                <span class="badge" style="background: rgba(53, 114, 165, 0.12); border-color: #3572a5; color: #4fc1ff;">Python 3.10+</span>
+                <span class="badge" style="background: rgba(78, 201, 176, 0.12); border-color: #4ec9b0; color: #4ec9b0;">DeepEval & Ragas</span>
+                <span class="badge" style="background: rgba(255, 111, 216, 0.12); border-color: #ff6fd8; color: #ff6fd8;">LangGraph Agentic Systems</span>
+                <span class="badge" style="background: rgba(49, 120, 198, 0.12); border-color: #3178c6; color: #38bdf8;">Apache Kafka & PyFlink</span>
+                <span class="badge" style="background: rgba(239, 68, 68, 0.12); border-color: #ef4444; color: #ef4444;">PyTorch & Transformers</span>
               </div>
 
               <div class="card mb-6" style="background: rgba(255, 255, 255, 0.01)">
-                <h3 class="font-bold text-vscode-bright mb-2">👋 Welcome!</h3>
-                <p class="text-sm text-vscode-text leading-loose">
-                  This portfolio is replica-inspired by the Visual Studio Code interface.
-                  <br>
-                  Navigate the tabs in the left sidebar to explore my background, read about the projects I have shipped, or trigger commands inside the simulation terminal at the bottom.
+                <h3 class="font-bold text-vscode-bright mb-2">Welcome to the Engineering Workspace</h3>
+                <p class="text-sm text-vscode-text leading-relaxed">
+                  This portfolio simulates an interactive Visual Studio Code desktop environment.
+                  <br><br>
+                  Explore real-world projects via <strong class="text-vscode-yellow">projects.js</strong>, review engineering experience in <strong class="text-vscode-blue">experience.ts</strong>, test live terminal commands below, or interact with the Copilot AI assistant trained on my full technical background.
                 </p>
               </div>
 
               <h3 class="text-md font-bold text-vscode-bright mb-3" style="border-bottom: 1px solid var(--border); padding-bottom: 4px;">Technical Breakdown</h3>
               <div class="grid-2">
                 <div>
-                  <h4 class="text-xs uppercase tracking-widest text-vscode-yellow mb-2">MLOps & DevSecOps</h4>
+                  <h4 class="text-xs uppercase tracking-widest text-vscode-yellow mb-2">LLM Evaluation & Safety</h4>
                   <ul class="point-list" style="margin-left: 8px; font-size: 12px; color: var(--text);">
-                    <li>• CI/CD Pipelines (Jenkins, GitHub Actions)</li>
-                    <li>• Model Registry & Lifecycle (MLflow, DVC)</li>
-                    <li>• Security Gates (SonarQube, Trivy, Gitleaks)</li>
-                    <li>• DAG Orchestration (Apache Airflow)</li>
+                    <li>• DeepEval & Ragas Quantitative Benchmarking</li>
+                    <li>• GEval Alignment, Faithfulness & Hallucination Rubrics</li>
+                    <li>• Automated Adversarial Red-Teaming & Jailbreak Testing</li>
+                    <li>• Zero PII Leakage Defense & Guardrail Enforcers</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 class="text-xs uppercase tracking-widest text-vscode-yellow mb-2">AI / ML Stack</h4>
+                  <h4 class="text-xs uppercase tracking-widest text-vscode-yellow mb-2">AI Systems & Python Backend</h4>
                   <ul class="point-list" style="margin-left: 8px; font-size: 12px; color: var(--text);">
-                    <li>• Agentic Workflows (LangGraph, LangChain)</li>
-                    <li>• LLM Optimisation (LoRA, QLoRA, Unsloth)</li>
-                    <li>• Deep Learning & Classical ML (PyTorch, XGBoost, Scikit-learn)</li>
-                    <li>• Search & Database (FAISS, MinIO, PostgreSQL)</li>
+                    <li>• Autonomous Multi-Agent Graphs (LangGraph, LangChain)</li>
+                    <li>• Distributed Stream Telemetry (Apache Kafka, PyFlink)</li>
+                    <li>• Containerized Architectures (Docker Compose, MinIO, Redis)</li>
+                    <li>• Automated CI/CD Gates (SonarQube SAST, Trivy, Gitleaks)</li>
                   </ul>
                 </div>
               </div>
             </div>
 
           </div>
+          <!-- Scroll Affordance Hint Pill -->
+          <button class="scroll-hint-pill hidden" id="scrollHintPill" onclick="scrollEditorDown()" title="Scroll down to inspect content">
+            <span>Scroll for more</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
         </div>
 
         <!-- Terminal Section -->
@@ -497,7 +634,13 @@
       </div>
       <div class="copilot-chat" id="copilotChat">
         <div class="chat-msg assistant">
-          hey 👀 you found the most extra portfolio on the internet. what do you need.
+          Hello! I am Tapas's AI Copilot. Ask me anything about his LLM evaluation suites, agentic AI systems, skills, or engineering experience.
+        </div>
+        <div class="copilot-chips" id="copilotChips">
+          <span class="copilot-chip" onclick="askCopilot('What are your top projects?')">Top Projects</span>
+          <span class="copilot-chip" onclick="askCopilot('Tell me about your LLM evaluation and safety work')">LLM Evaluation & Safety</span>
+          <span class="copilot-chip" onclick="askCopilot('What is your educational background and CGPA?')">Education & CGPA</span>
+          <span class="copilot-chip" onclick="askCopilot('How can I contact Tapas?')">Contact Information</span>
         </div>
       </div>
       <div class="copilot-input-area">
@@ -545,8 +688,12 @@
         <svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--text)" stroke-width="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <div style="font-size:12px; font-weight:bold; color:var(--bright);" id="compactTitle">home.tsx</div>
-      <button class="ml-auto" id="compactSearchBtn" style="background:transparent; border:none;">🔍</button>
-      <button id="compactCopilotBtn" style="background:transparent; border:none;">🤖</button>
+      <button class="ml-auto" id="compactSearchBtn" style="background:transparent; border:none; color:var(--dim);" title="Search">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button id="compactCopilotBtn" style="background:transparent; border:none; color:var(--pink);" title="Copilot">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5L12 2z"/></svg>
+      </button>
     </div>
     <div class="compact-content" id="compactContent">
       <!-- The active editor content will be mirrored here on mobile view -->
@@ -562,7 +709,7 @@
       </div>
       <div class="status-right">
         <div class="status-item" onclick="toggleCopilot()">
-          <span>🤖 Copilot</span>
+          <span>Copilot</span>
         </div>
         <div class="status-item" onclick="toggleThemeDialog(true)">
           <span>⚙ Themes</span>
@@ -599,10 +746,87 @@
     </div>
   </div>
 
-  <!-- System Toasts notifications -->
-  <div class="toasts-container" id="toastsContainer"></div>
+  <!-- Floating AI Copilot Trigger & Notification -->
+  <div class="floating-copilot-container" id="floatingCopilotContainer">
+    <div class="floating-copilot-tooltip" id="floatingCopilotTooltip" onclick="toggleCopilot(true)">
+      <span>Tapas's AI Copilot — Ask about LLM Eval & Projects</span>
+      <button class="tooltip-close" onclick="closeCopilotTooltip(event)" title="Dismiss">✕</button>
+    </div>
+    <button class="floating-copilot-btn" id="floatingCopilotBtn" onclick="toggleCopilot(true)" title="Chat with Tapas' Copilot (Ctrl+Shift+C)">
+      <span class="copilot-pulse-dot"></span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5L12 2z"/></svg>
+      <span>Ask AI Copilot</span>
+    </button>
+  </div>
+
+  <!-- Guided Portfolio Tour Modal -->
+  <div class="guide-overlay hidden" id="guideOverlay" onclick="if(event.target === this) toggleGuide(false)">
+    <div class="guide-modal">
+      <div class="guide-header">
+        <div class="guide-title-box">
+          <span class="guide-badge">QUICK TOUR</span>
+          <h2 class="guide-title">Welcome to Tapas' Engineering Portfolio</h2>
+          <p class="guide-subtitle">A concise guide to navigate projects, inspect architectures, and chat with AI.</p>
+        </div>
+        <button class="guide-close-btn" onclick="toggleGuide(false)">✕</button>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="guide-card-icon" style="display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="guide-card-content">
+            <h3>File Explorer & Tabs</h3>
+            <p>Click files in the left sidebar or tabs to browse projects (<code>projects.js</code>), experience (<code>experience.ts</code>), and tech skills (<code>skills.json</code>).</p>
+            <button class="guide-card-action" onclick="toggleGuide(false); openFile('projects');">Browse Projects →</button>
+          </div>
+        </div>
+
+        <div class="guide-card highlight-card">
+          <div class="guide-card-icon" style="display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.8"><path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5L12 2z"/></svg>
+          </div>
+          <div class="guide-card-content">
+            <h3>Tapas' AI Copilot</h3>
+            <p>Chat with an AI assistant trained on Tapas's LLM evaluation suites, multi-agent systems, and MLOps pipelines. Click the floating button or press <code>Ctrl+Shift+C</code>.</p>
+            <button class="guide-card-action highlight-btn" onclick="toggleGuide(false); toggleCopilot(true);">Open Copilot Chat →</button>
+          </div>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-icon" style="display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <div class="guide-card-content">
+            <h3>Interactive Terminal</h3>
+            <p>Execute bash commands like <code>help</code>, <code>projects</code>, <code>skills</code>, or <code>clear</code>. Toggle with <code>Ctrl+`</code> or status bar.</p>
+            <button class="guide-card-action" onclick="toggleGuide(false); toggleTerminal(true); runTerminalCmd('help');">Launch Terminal →</button>
+          </div>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-icon" style="display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <div class="guide-card-content">
+            <h3>Quick Open & Themes</h3>
+            <p>Press <code>Ctrl+P</code> to search any file or view. Click <code>⚙ Themes</code> in the bottom status bar to switch between Tokyo Night, Rosé Pine, Nord, etc.</p>
+            <button class="guide-card-action" onclick="toggleGuide(false); togglePaletteOverlay(true);">Search Files (Ctrl+P) →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide-footer">
+        <label class="guide-checkbox-label">
+          <input type="checkbox" id="guideDontShowAgain"> Don't show again automatically
+        </label>
+        <button class="btn btn-primary" onclick="toggleGuide(false)" style="padding: 6px 18px;">Start Exploring</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Core Javascript Logic -->
-  <script src="assets/index.js?v=1"></script>
+  <script src="assets/index.js?v=10"></script>
 </body>
 </html>

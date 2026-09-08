@@ -22,3 +22,12 @@ package-lock.json
 .system_generated/
 
 .vercel
+.env
+.env.*
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+.deepeval/
+.agents/
