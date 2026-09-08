@@ -7,8 +7,10 @@ import google.generativeai as genai
 # Load environment variables from .env
 load_dotenv()
 
-# 1. Configure API key
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+# 1. Configure API key safely
+api_key = (os.getenv("GEMINI_API_KEY") or "").strip().strip('"').strip("'")
+if api_key:
+    genai.configure(api_key=api_key)
 
 # 2. Load your JSON dataset reliably regardless of CWD (e.g., serverless execution in api/)
 base_dir = Path(__file__).resolve().parent
@@ -105,7 +107,7 @@ def generate_chat_response(user_message: str, history: list = None) -> str:
     if history is None:
         history = []
 
-    api_key = os.getenv("GEMINI_API_KEY")
+    api_key = (os.getenv("GEMINI_API_KEY") or "").strip().strip('"').strip("'")
     if api_key:
         genai.configure(api_key=api_key)
         for m_name in PRIMARY_MODELS:
