@@ -49,6 +49,7 @@ STRICT OPERATIONAL RULES & GUARDRAILS:
 
 5. FORMATTING & LINKS:
    - When providing links, use clean Markdown: [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/), [GitHub](https://github.com/tapasbarman-ai), and [Tapas's Resume (PDF)](https://drive.google.com/file/d/1OTiuZ2yOuiOl9tajh5HMpuYVvZq5s2sJ/view?usp=sharing).
+   - Contact details: Tapas's direct email is tapasb.dev@gmail.com, and his phone/WhatsApp number is **+91-7363971909**. When asked for his contact number or phone, always provide **+91-7363971909**.
    - Use bolding (**text**) for important metrics, job titles, and tools to make responses clean and easy to scan.
    - Use bullet points for lists of projects or skills.
 """
@@ -64,6 +65,8 @@ def fallback_knowledge_lookup(user_message: str) -> str:
     msg = user_message.lower()
     if any(k in msg for k in ["resume", "cv"]):
         return "You can access and download Tapas's full resume here: [Tapas Barman - Resume (PDF)](https://drive.google.com/file/d/1OTiuZ2yOuiOl9tajh5HMpuYVvZq5s2sJ/view?usp=sharing). You can also click **tapas_ai.pdf** in the explorer sidebar to open it directly!"
+    if any(k in msg for k in ["phone", "mobile", "number", "call", "whatsapp", "cell"]):
+        return "You can reach Tapas directly by phone or WhatsApp at **+91-7363971909** or via email at **tapasb.dev@gmail.com**."
     if any(k in msg for k in ["project", "portfolio", "built", "work"]):
         projs = portfolio_data.get("projects", [])
         lines = ["Tapas has built several production-grade engineering and AI systems:\n"]
@@ -78,8 +81,8 @@ def fallback_knowledge_lookup(user_message: str) -> str:
     if any(k in msg for k in ["eval", "evaluation", "safety", "guardrail", "deepeval", "ragas", "red team", "redteam"]):
         return "Evaluation and safety are core pillars of Tapas's engineering practice:\n\n* **LLM Evaluation**: Leverages **DeepEval** and **Ragas** to quantitatively benchmark faithfulness, hallucination rates, and context precision.\n* **Safety Guardrails**: Implements strict PII extraction defense, adversarial jailbreak resilience, and domain scope deflection.\n* **Production Governance**: Automated model drift monitoring with Evidently AI and DevSecOps scans with SonarQube and Trivy."
     if any(k in msg for k in ["contact", "email", "reach", "hire", "linkedin"]):
-        return "You can reach Tapas directly via email at **tapasb.dev@gmail.com** or connect on [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/) and [GitHub](https://github.com/tapasbarman-ai)."
-    return "Tapas Barman is an **AI Engineer and Python Developer** specializing in LLM evaluation, autonomous multi-agent systems (LangGraph), and distributed streaming (Apache Kafka & PyFlink). You can connect with him at **tapasb.dev@gmail.com** or on [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/)."
+        return "You can reach Tapas directly via email at **tapasb.dev@gmail.com**, by phone/WhatsApp at **+91-7363971909**, or connect on [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/) and [GitHub](https://github.com/tapasbarman-ai)."
+    return "Tapas Barman is an **AI Engineer and Python Developer** specializing in LLM evaluation, autonomous multi-agent systems (LangGraph), and distributed streaming (Apache Kafka & PyFlink). You can connect with him at **tapasb.dev@gmail.com**, by phone at **+91-7363971909**, or on [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/)."
 
 def generate_chat_response(user_message: str, history: list = None) -> str:
     """

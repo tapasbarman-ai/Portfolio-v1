@@ -1107,6 +1107,10 @@ let copilotHistory = [];
 // Local fallback replies for key terms
 const copilotKnowledgeBase = [
   {
+    keys: ["phone", "mobile", "number", "call", "whatsapp", "cell", "telephone"],
+    reply: "You can reach Tapas directly by phone or WhatsApp at **+91 7363971909** or via email at **tapasb.dev@gmail.com**."
+  },
+  {
     keys: ["contact", "email", "phone", "reach", "hire", "collab", "linkedin", "message", "connect", "mail"],
     reply: "You can reach Tapas via email at **tapasb.dev@gmail.com** or phone at **+91 7363971909**.\n\nYou can also connect on **LinkedIn** (linkedin.com/in/tapas-barman-2661161a0) or send a message directly through the **contact.css** tab."
   },

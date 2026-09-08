@@ -10,7 +10,7 @@ try:
     from src.chatbot import generate_chat_response
 except Exception as e:
     def generate_chat_response(msg, history=None):
-        return "Tapas Barman is an AI Engineer and Python Developer specializing in LLM Evaluation, Agentic AI, and Distributed Systems. Contact him at tapasb.dev@gmail.com."
+        return "Tapas Barman is an AI Engineer and Python Developer. Reach him by phone at **+91-7363971909**, email at **tapasb.dev@gmail.com**, or on [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/)."
 
 class handler(BaseHTTPRequestHandler):
     def do_POST(self):
