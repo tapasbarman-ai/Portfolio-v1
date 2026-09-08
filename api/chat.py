@@ -6,11 +6,29 @@ import sys
 # Ensure root directory is on Python path so src modules can be imported
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+import traceback
+
+generate_chat_response = None
+
 try:
-    from src.chatbot import generate_chat_response
-except Exception as e:
-    def generate_chat_response(msg, history=None):
-        return "Tapas Barman is an AI Engineer and Python Developer. Reach him by phone at **+91-7363971909**, email at **tapasb.dev@gmail.com**, or on [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/)."
+    from ._chatbot import generate_chat_response as gcr
+    generate_chat_response = gcr
+except Exception:
+    try:
+        from _chatbot import generate_chat_response as gcr
+        generate_chat_response = gcr
+    except Exception:
+        pass
+
+if not generate_chat_response:
+    try:
+        from src.chatbot import generate_chat_response as gcr
+        generate_chat_response = gcr
+    except Exception as e:
+        print(f"[API ERROR importing chatbot]: {e}")
+        def fallback_stub(msg, history=None):
+            return "Tapas Barman is an AI Engineer and Python Developer. Reach him by phone at **+91-7363971909**, email at **tapasb.dev@gmail.com**, or on [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/)."
+        generate_chat_response = fallback_stub
 
 class handler(BaseHTTPRequestHandler):
     def do_POST(self):
