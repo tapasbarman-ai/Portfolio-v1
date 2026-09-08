@@ -54,11 +54,14 @@ STRICT OPERATIONAL RULES & GUARDRAILS:
    - Use bullet points for lists of projects or skills.
 """
 
-# 4. Initialize model
-model = genai.GenerativeModel(
-    model_name="gemini-flash-latest",
-    system_instruction=SYSTEM_INSTRUCTION
-)
+# 4. Model candidates (gemini-3.5-flash-lite has active free quota)
+PRIMARY_MODELS = ["gemini-3.5-flash-lite", "gemini-2.5-flash"]
+
+def get_gemini_model(model_name: str):
+    return genai.GenerativeModel(
+        model_name=model_name,
+        system_instruction=SYSTEM_INSTRUCTION
+    )
 
 def fallback_knowledge_lookup(user_message: str) -> str:
     """Resilient fallback answering strictly from portfolio_data if Gemini API rate limit or outage occurs."""
@@ -86,20 +89,27 @@ def fallback_knowledge_lookup(user_message: str) -> str:
 
 def generate_chat_response(user_message: str, history: list = None) -> str:
     """
-    Handles multi-turn conversations with Gemini with graceful local fallback.
+    Handles multi-turn conversations with Gemini with multi-model redundancy and local fallback.
     """
     if history is None:
         history = []
 
-    try:
-        # Start chat with existing history
-        chat = model.start_chat(history=history)
-        # Send the new message and get response
-        response = chat.send_message(user_message)
-        return response.text
-    except Exception:
-        # Graceful degradation if Gemini quota window is exceeded
-        return fallback_knowledge_lookup(user_message)
+    api_key = os.getenv("GEMINI_API_KEY")
+    if api_key:
+        genai.configure(api_key=api_key)
+        for m_name in PRIMARY_MODELS:
+            try:
+                m = get_gemini_model(m_name)
+                chat = m.start_chat(history=history)
+                response = chat.send_message(user_message)
+                if response and response.text:
+                    return response.text
+            except Exception as e:
+                print(f"[Chatbot LLM Exception on {m_name}]: {e}")
+                continue
+
+    # Graceful degradation if Gemini quota window is exceeded or API key missing
+    return fallback_knowledge_lookup(user_message)
 
 
 # --- Quick Test ---
