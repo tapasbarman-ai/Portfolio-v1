@@ -794,7 +794,7 @@ html, body {
   border-radius: 50%;
   background-image: url("profile.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 15%;
   border: 2px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(79, 193, 255, 0.2);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
