@@ -8,7 +8,7 @@
       "linkedin": "https://www.linkedin.com/in/tapas-barman-2661161a0/",
       "github": "https://github.com/tapasbarman-ai",
       "portfolio": "https://github.com/tapasbarman-ai/Portfolio-v1",
-      "resume": "https://drive.google.com/file/d/1OTiuZ2yOuiOl9tajh5HMpuYVvZq5s2sJ/view?usp=sharing"
+      "resume": "https://drive.google.com/file/d/1eLyzmRSZwToCgMmq8LNWOpEEdJAdIUgv/view?usp=sharing"
     },
     "location": {
       "city": "Lucknow",
@@ -27,7 +27,11 @@
     }
   ],
   "technical_skills": {
-    "programming_languages": ["Python", "SQL", "Bash"],
+    "programming_languages": [
+      "Python",
+      "SQL",
+      "Bash"
+    ],
     "ai_ml_core": [
       "PyTorch",
       "Scikit-learn",
@@ -67,7 +71,11 @@
       "JSON",
       "API Development"
     ],
-    "databases": ["PostgreSQL", "MongoDB", "SQLite"],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "SQLite"
+    ],
     "cloud_and_devops": [
       "Docker",
       "AWS (EC2, S3, ECR, IAM, RDS, Lambda)",
@@ -82,20 +90,20 @@
       "role": "MLOps Intern",
       "company": "Aaizel International Technologies Private Limited",
       "location": "On-Site",
-      "duration": "Dec 2025 – Apr 2026",
+      "duration": "Dec 2025 – Mar 2026",
       "projects": [
         {
-          "name": "Climate Forte",
-          "description": "Engineered a production-grade ETL and ML pipeline using Apache Airflow for data ingestion, model inference, and Amazon S3 storage.",
+          "name": "Climate Forte (Geospatial ETL & MLOps)",
+          "description": "Built production-grade ETL & ML pipeline (Airflow, S3) automating ingestion and processing of 3GB of GEOS-FP geospatial data every 3 hours.",
           "highlights": [
-            "Automated model retraining and data/model drift monitoring using MLflow, DVC, Evidently, and Jenkins."
+            "Implemented automated retraining, drift monitoring, and CI/CD via MLflow, DVC, Evidently, and Jenkins."
           ]
         },
         {
-          "name": "VidyaDristi – OSINT",
-          "description": "Developed an ML backend for open-source intelligence gathering and entity resolution.",
+          "name": "VidyaDristi – OSINT & Knowledge Graph",
+          "description": "Developed ML backend for NER, LLM embeddings, vector search, and clustering for intelligence extraction and entity resolution.",
           "highlights": [
-            "Implemented Named Entity Recognition (NER), LLM embeddings, vector similarity search, and clustering for intelligence extraction."
+            "Ingested 900+ RSS feeds and scrapers (150 Indian, 750 international) into a Supabase-backed knowledge graph."
           ]
         }
       ]
@@ -104,14 +112,14 @@
       "role": "Computer Vision & AI Research Intern",
       "company": "Indian Institute of Technology Bombay (IIT Bombay)",
       "location": "Remote",
-      "duration": "July 2025 – Dec 2025",
+      "duration": "Jul 2025 – Dec 2025",
       "projects": [
         {
-          "name": "Kalanjiyam",
-          "description": "Digital preservation and archiving platform for ancient Siddha literature using OCR-based digitization and proofreading.",
+          "name": "Kalanjiyam Digital Preservation Platform",
+          "description": "Platform for digital preservation and archiving of Siddha literature across 25 Indian languages through OCR-based text digitization and proofreading.",
           "highlights": [
-            "Leap OCR: Replaced legacy Tesseract engine with GPU-based EasyOCR, resulting in a 3x inference speedup and an 18% reduction in character errors.",
-            "Bhaasha OCR: Developed a table detection and structural reconstruction pipeline using YOLO + Transformers, achieving a 22% improvement in accuracy."
+            "Replaced Tesseract with GPU-based EasyOCR, achieving a 3x speedup and 18% error reduction.",
+            "Built table detection and reconstruction using YOLO + Transformers, improving accuracy by 22%."
           ]
         }
       ]
@@ -134,6 +142,80 @@
     }
   ],
   "projects": [
+    {
+      "name": "Route Pilot — Autonomous Browser Agent",
+      "tech_stack": [
+        "Python",
+        "Playwright",
+        "LangGraph",
+        "DeepEval",
+        "Telegram Bot"
+      ],
+      "description": "Hybrid Planner–Actor–Evaluator autonomous browser agent (Playwright) for bus search and booking via Telegram bot.",
+      "metrics_and_impact": [
+        "Built hybrid Planner–Actor–Evaluator browser agent using Playwright and LangGraph for autonomous bus search and booking.",
+        "Validated agent resilience via DeepEval across 78 golden tests achieving a 98%+ pass rate.",
+        "Cut token cost by 98.9% (reducing from 45,000 to 405 tokens per query)."
+      ],
+      "evaluation_and_safety": "DeepEval evaluation across 78 golden test scenarios, browser execution timeout safeguards, and 98.9% prompt token optimization."
+    },
+    {
+      "name": "RAG Evaluation Suite",
+      "tech_stack": [
+        "Python",
+        "LangChain",
+        "ChromaDB",
+        "Gemini",
+        "DeepEval",
+        "MS-MARCO"
+      ],
+      "description": "Two-stage RAG pipeline with dense vector indexing and cross-encoder reranking, governed by a continuous DeepEval regression evaluation suite.",
+      "metrics_and_impact": [
+        "Built two-stage RAG pipeline combining ChromaDB vector search with MS-MARCO reranker for ultra-precise factual retrieval.",
+        "Engineered a DeepEval regression suite benchmarking Faithfulness, Answer Relevancy, and Contextual Precision/Recall.",
+        "Achieved 100% guardrail pass rate at an ultra-low inference cost of .00018 per query."
+      ],
+      "evaluation_and_safety": "Continuous DeepEval regression testing for Faithfulness, Answer Relevancy, Context Precision/Recall, and 100% safety guardrail compliance."
+    },
+    {
+      "name": "LLM Fine-Tuning: Customer Support Agent",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "Hugging Face",
+        "Unsloth",
+        "LoRA",
+        "QLoRA",
+        "Mistral-7B"
+      ],
+      "description": "Parameter-efficient fine-tuning (4-bit QLoRA) of Mistral-7B-Instruct on customer support dialogue datasets with Unsloth optimization.",
+      "metrics_and_impact": [
+        "Fine-tuned Mistral-7B-Instruct on 27,000 samples via 4-bit QLoRA with Unsloth acceleration.",
+        "Reduced GPU VRAM requirements by 70% and achieved a 5x training speedup.",
+        "Applied sequence packing, response-only loss masking, and NEFTune noise regularization for optimal conversational generalization."
+      ],
+      "evaluation_and_safety": "Response-only loss masking to prevent training on user prompts, NEFTune regularization against overfitting, and loss convergence validation."
+    },
+    {
+      "name": "Visa Approval Prediction — End-to-End MLOps Pipeline",
+      "tech_stack": [
+        "Python",
+        "Scikit-learn",
+        "MongoDB Atlas",
+        "Docker",
+        "AWS EC2",
+        "AWS ECR",
+        "FastAPI",
+        "GitHub Actions"
+      ],
+      "description": "Production-grade MLOps pipeline for US visa approval forecasting with automated model training, validation, and containerized cloud deployment.",
+      "metrics_and_impact": [
+        "Engineered end-to-end MLOps pipeline automating data ingestion from MongoDB Atlas, feature engineering, and model selection.",
+        "Packaged inference API with FastAPI and Docker for reproducible cloud execution.",
+        "Configured automated CI/CD deployment on AWS EC2 and AWS ECR via GitHub Actions."
+      ],
+      "evaluation_and_safety": "Automated data drift checks, model performance gating before container registry push, and AWS IAM least-privilege security."
+    },
     {
       "name": "Production MLOps Platform & Model Governance",
       "tech_stack": [
@@ -280,15 +362,19 @@
     },
     {
       "title": "Meta Hacker Cup 2025",
-      "detail": "Achieved a global rank under 2000."
+      "detail": "Secured global rank under 2000."
+    },
+    {
+      "title": "IIT-JAM 2024",
+      "detail": "Secured All India Rank (AIR) 1200 in Physics."
     },
     {
       "title": "OpenAI Open Model Hackathon",
-      "detail": "Successfully developed and submitted an open-weights model project."
+      "detail": "Successfully participated and submitted an open-weights model project."
     },
     {
-      "title": "Competitive Programming",
-      "detail": "Solved 200+ algorithmic problems on LeetCode."
+      "title": "Competitive Programming & LeetCode",
+      "detail": "Solved 350+ algorithmic problem submissions; active competitive programmer."
     }
   ],
   "frequently_asked_questions": [
@@ -307,6 +393,14 @@
     {
       "question": "Can Tapas work with cloud services and containerization?",
       "answer": "Yes. He works extensively with Docker and AWS services including EC2, S3, ECR, IAM, RDS, and Lambda, backed by automated CI/CD using GitHub Actions."
+    }
+  ],
+  "leadership": [
+    {
+      "role": "Community Lead – Web and Coding (WnC) Wing",
+      "organization": "Aether – The Data Science & AI/ML Club of IIIT Lucknow",
+      "duration": "Aug 2025 – Present",
+      "description": "Organizing coding sessions, competitive programming contests, and technical workshops for MSc, MTech, and PhD students."
     }
   ]
 }

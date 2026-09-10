@@ -61,7 +61,7 @@ STRICT OPERATIONAL RULES & GUARDRAILS:
    - Keep answers concise (2–4 sentences) unless the user asks for a detailed deep dive.
 
 5. FORMATTING & LINKS:
-   - When providing links, use clean Markdown: [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/), [GitHub](https://github.com/tapasbarman-ai), and [Tapas's Resume (PDF)](https://drive.google.com/file/d/1OTiuZ2yOuiOl9tajh5HMpuYVvZq5s2sJ/view?usp=sharing).
+   - When providing links, use clean Markdown: [LinkedIn](https://www.linkedin.com/in/tapas-barman-2661161a0/), [GitHub](https://github.com/tapasbarman-ai), and [Tapas's Resume (PDF)](https://drive.google.com/file/d/1eLyzmRSZwToCgMmq8LNWOpEEdJAdIUgv/view?usp=sharing).
    - Contact details: Tapas's direct email is tapasb.dev@gmail.com, and his phone/WhatsApp number is **+91-7363971909**. When asked for his contact number or phone, always provide **+91-7363971909**.
    - Use bolding (**text**) for important metrics, job titles, and tools to make responses clean and easy to scan.
    - Use bullet points for lists of projects or skills.
@@ -80,7 +80,7 @@ def fallback_knowledge_lookup(user_message: str) -> str:
     """Resilient fallback answering strictly from portfolio_data if Gemini API rate limit or outage occurs."""
     msg = user_message.lower()
     if any(k in msg for k in ["resume", "cv"]):
-        return "You can access and download Tapas's full resume here: [Tapas Barman - Resume (PDF)](https://drive.google.com/file/d/1OTiuZ2yOuiOl9tajh5HMpuYVvZq5s2sJ/view?usp=sharing). You can also click **tapas_ai.pdf** in the explorer sidebar to open it directly!"
+        return "You can access and download Tapas's full resume here: [Tapas Barman - Resume (PDF)](https://drive.google.com/file/d/1eLyzmRSZwToCgMmq8LNWOpEEdJAdIUgv/view?usp=sharing). You can also click **tapas_ai.pdf** in the explorer sidebar to open it directly!"
     if any(k in msg for k in ["phone", "mobile", "number", "call", "whatsapp", "cell"]):
         return "You can reach Tapas directly by phone or WhatsApp at **+91-7363971909** or via email at **tapasb.dev@gmail.com**."
     if any(k in msg for k in ["project", "portfolio", "built", "work"]):

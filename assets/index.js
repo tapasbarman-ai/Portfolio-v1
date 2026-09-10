@@ -1,5 +1,5 @@
 // Resume Direct URL
-const RESUME_URL = "https://drive.google.com/file/d/1OTiuZ2yOuiOl9tajh5HMpuYVvZq5s2sJ/view?usp=sharing";
+const RESUME_URL = "https://drive.google.com/file/d/1eLyzmRSZwToCgMmq8LNWOpEEdJAdIUgv/view?usp=sharing";
 
 // Personal Bio & Config Data
 const Ee = {
@@ -66,6 +66,54 @@ const zp = [
 
 // Projects Data with Clean SVG Icons
 const Op = [
+  {
+    id: 101,
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>`,
+    accent: "#38bdf8",
+    type: "Autonomous Browser Agent · Playwright · LangGraph · DeepEval",
+    name: "Route Pilot",
+    desc: "Built a hybrid Planner–Actor–Evaluator autonomous browser agent using Playwright and LangGraph for bus ticket search and booking via Telegram bot. Cut prompt token consumption by 98.9% (from 45,000 down to 405 tokens per query).",
+    safety: "Validated end-to-end agent decision flow via DeepEval across 78 golden test scenarios, achieving a 98%+ pass rate with automated fallback timeouts and robust action validation.",
+    tags: ["Python", "Playwright", "LangGraph", "DeepEval", "Telegram Bot", "Token Optimization", "Agentic AI"],
+    link: "https://github.com/tapasbarman-ai",
+    period: "2026"
+  },
+  {
+    id: 102,
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`,
+    accent: "#4ec9b0",
+    type: "RAG Evaluation & Safety · Regression Suite · ChromaDB",
+    name: "RAG Evaluation Suite",
+    desc: "Architected a high-precision two-stage RAG pipeline pairing ChromaDB dense vector indexing with an MS-MARCO cross-encoder reranker for zero-hallucination factual grounding at $0.00018 per query.",
+    safety: "Constructed a continuous DeepEval regression evaluation suite benchmarking Faithfulness, Answer Relevancy, Contextual Precision, and Contextual Recall with a 100% safety guardrail pass rate.",
+    tags: ["DeepEval", "LangChain", "ChromaDB", "MS-MARCO Reranker", "Gemini", "Faithfulness Eval", "Python"],
+    link: "https://github.com/tapasbarman-ai",
+    period: "2026"
+  },
+  {
+    id: 103,
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+    accent: "#a855f7",
+    type: "LLM Fine-Tuning · 4-bit QLoRA · Unsloth PEFT",
+    name: "LLM Fine-Tuning: Support Agent",
+    desc: "Fine-tuned Mistral-7B-Instruct on 27,000 conversational samples using 4-bit QLoRA with Unsloth acceleration, cutting GPU VRAM requirements by 70% and accelerating training speed 5x.",
+    safety: "Implemented sequence packing, response-only loss masking to eliminate user prompt bias during training, and NEFTune noise regularization for optimal conversational generalization.",
+    tags: ["Python", "PyTorch", "Hugging Face", "Unsloth", "4-bit QLoRA", "Mistral-7B", "PEFT"],
+    link: "https://github.com/tapasbarman-ai",
+    period: "2025 – 2026"
+  },
+  {
+    id: 104,
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><line x1="15" y1="8" x2="17" y2="8"/><line x1="15" y1="12" x2="17" y2="12"/><line x1="7" y1="16" x2="17" y2="16"/></svg>`,
+    accent: "#facc15",
+    type: "Production MLOps · Cloud Infrastructure · CI/CD",
+    name: "Visa Approval Prediction MLOps",
+    desc: "Engineered an end-to-end MLOps pipeline for US visa approval forecasting with automated MongoDB Atlas data ingestion, feature engineering, model selection, and FastAPI microservice serving.",
+    safety: "Containerized with Docker and orchestrated with automated CI/CD pipelines deploying to AWS EC2 and AWS ECR via GitHub Actions with automated data validation gates.",
+    tags: ["Python", "Scikit-learn", "MongoDB Atlas", "Docker", "AWS EC2", "AWS ECR", "FastAPI", "GitHub Actions"],
+    link: "https://github.com/tapasbarman-ai",
+    period: "2025 – 2026"
+  },
   {
     id: 1,
     icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
@@ -272,24 +320,23 @@ const Dp = [
 // Experiences Data with Highlighted Key Achievements & Metrics
 const Hp = [
   {
-    date: "Dec 2025 – Apr 2026",
+    date: "Dec 2025 – Mar 2026",
     current: false,
     role: "MLOps Intern",
-    company: "Aaizel International Technologies Private Limited",
+    company: "Aaizel International Technologies Pvt. Ltd.",
     companyUrl: "https://www.aaizeltech.com/weather-api",
     location: "On-Site · Noida, India",
-    summary: "Engineered production ETL & ML pipelines for meteorological forecasting (Climate Forte) and built the machine learning backend for open-source intelligence gathering (VidyaDristi).",
+    summary: "Engineered production ETL & ML pipelines for 3GB GEOS-FP geospatial data every 3 hours (Airflow, S3) and developed OSINT ML backend ingesting 900+ sources into a Supabase knowledge graph.",
     metrics: [
-      { val: "100% Automated", label: "CI/CD & Retraining" },
-      { val: "Continuous", label: "Evidently AI Drift Gating" },
-      { val: "Production", label: "Airflow · MLflow · S3" }
+      { val: "3GB / 3hrs", label: "GEOS-FP Pipeline" },
+      { val: "900+ Feeds", label: "Supabase Knowledge Graph" },
+      { val: "Continuous", label: "Evidently AI Drift Gating" }
     ],
     achievements: [
-      "Built an enterprise-grade ETL and ML inference pipeline for <strong>Climate Forte</strong> using Apache Airflow, handling automated data ingestion, model scoring, and Amazon S3 object storage.",
-      "Automated continuous model retraining cycles and drift monitoring using <strong>MLflow, DVC, Evidently AI</strong>, and Jenkins CI/CD pipelines.",
-      "Engineered the machine learning backend for <strong>VidyaDristi (OSINT)</strong>, implementing Named Entity Recognition (NER), LLM vector embeddings, FAISS similarity search, and clustering for automated entity resolution."
+      "Built a production-grade <strong>ETL & ML pipeline (Airflow, S3)</strong> automating ingestion and processing of 3GB of GEOS-FP geospatial data every 3 hours; implemented automated retraining, drift monitoring, and CI/CD via MLflow, DVC, Evidently, and Jenkins.",
+      "Developed the ML backend for <strong>NER, LLM embeddings, vector search, and clustering</strong>, ingesting 900+ RSS feeds/scrapers (150 Indian, 750 international) into a Supabase-backed knowledge graph for intelligence extraction and entity resolution."
     ],
-    tags: ["Apache Airflow", "MLflow", "DVC", "Evidently AI", "Jenkins", "FAISS", "Docker", "DevSecOps", "Python", "Amazon S3"]
+    tags: ["Apache Airflow", "MLflow", "DVC", "Evidently AI", "Jenkins", "Supabase", "Vector Search", "Docker", "Python", "Amazon S3"]
   },
   {
     date: "Jul 2025 – Dec 2025",
@@ -297,19 +344,37 @@ const Hp = [
     role: "Computer Vision & AI Research Intern",
     company: "Indian Institute of Technology Bombay (IIT Bombay)",
     location: "Remote",
-    summary: "Engineered neural document digitization, high-speed OCR, and structural table extraction systems for Kalanjiyam, IIT Bombay's national preservation platform for ancient Siddha literature.",
+    summary: "Worked on a platform for digital preservation and archiving of Siddha literature across 25 Indian languages through OCR-based text digitization and proofreading.",
     metrics: [
-      { val: "3x Faster", label: "Inference Throughput" },
+      { val: "3x Faster", label: "GPU EasyOCR Speedup" },
       { val: "-18% CER", label: "Character Error Reduction" },
-      { val: "+22% Accuracy", label: "Table Structure Extraction" }
+      { val: "+22% Accuracy", label: "YOLO + Transformers Table Extraction" }
     ],
     achievements: [
-      "<strong>3x Throughput Speedup & 18% CER Reduction:</strong> Replaced legacy Tesseract OCR with GPU-accelerated EasyOCR for Tamil & Sanskrit script processing on historical literature.",
-      "<strong>22% Accuracy Boost in Table Extraction:</strong> Designed and trained a YOLO object detection + Transformer attention pipeline for complex ancient tabular layouts.",
-      "Quantified and benchmarked neural document understanding using <strong>TEDS (Tree Edit Distance for Structured Tables)</strong>, CER, and WER metrics.",
+      "Worked on a platform for <strong>digital preservation and archiving of Siddha literature across 25 Indian languages</strong>, through OCR-based text digitization and proofreading.",
+      "<strong>3x Speedup & 18% Error Reduction:</strong> Replaced Tesseract with GPU-based EasyOCR for historical manuscript digitization.",
+      "<strong>22% Accuracy Boost in Table Extraction:</strong> Built table detection and reconstruction using YOLO + Transformers for ancient tabular layouts.",
       "Packaged deep learning inference models into production-ready <strong>FastAPI</strong> microservice endpoints with async request handling."
     ],
-    tags: ["EasyOCR", "YOLO", "FastAPI", "Transformers", "Python", "TEDS Metric", "REST APIs", "Computer Vision"]
+    tags: ["EasyOCR", "YOLO", "Transformers", "FastAPI", "Python", "TEDS Metric", "Computer Vision", "IIT Bombay"]
+  },
+  {
+    date: "Aug 2025 – Present",
+    current: true,
+    role: "Community Lead – Web and Coding (WnC) Wing",
+    company: "Aether – Data Science & AI/ML Club of IIIT Lucknow",
+    location: "IIIT Lucknow",
+    summary: "Leading technical initiatives, competitive programming contests, and workshops across AI/ML and software engineering.",
+    metrics: [
+      { val: "WnC Lead", label: "Web & Coding Wing" },
+      { val: "Workshops", label: "MSc, MTech & PhD" },
+      { val: "Contests", label: "Competitive Programming" }
+    ],
+    achievements: [
+      "Organizing coding sessions, competitive programming contests, and technical workshops for MSc, MTech, and PhD students at IIIT Lucknow.",
+      "Mentoring students in algorithmic problem solving, Python engineering, and AI/ML project architecture."
+    ],
+    tags: ["Leadership", "Community", "Competitive Programming", "Technical Workshops", "IIIT Lucknow"]
   },
   {
     date: "Jan 2025 – Jun 2025",
@@ -1164,7 +1229,7 @@ const copilotKnowledgeBase = [
   },
   {
     keys: ["achievements", "rank", "iit-jam", "jam"],
-    reply: "He secured **All India Rank (AIR) 1200** in the competitive IIT-JAM 2024 Physics exam. He's also solved **200+ LeetCode problems** and is an active practitioner on Kaggle."
+    reply: "He secured **All India Rank (AIR) 1200** in IIT-JAM 2024 Physics, global rank **585 / 20,540** in TCS CodeVita 2025 (Top 2.8%), global rank under 2000 in Meta Hacker Cup 2025, and has solved **350+ LeetCode submissions**."
   },
   {
     keys: ["source", "repo", "code", "download", "clone", "github"],
